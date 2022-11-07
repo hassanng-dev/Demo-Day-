@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/6402ca9563.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Profile Page</title>
+</head>
+<body>
+ 
+  <header>
+    <nav>
+      <section class="logo">
+        <a href="/index"><img src="img/logo.jpg" class="logoPic" alt="Engee fitness logo"></a>
+      </section>
+    
+      <section class="links">
+        <ul>
+          <li><a href="/index">Home</a></li>
+          <li><a href="/workout">Workouts</a></li>
+          <li><a href="/mealplan">Meal Plans</a></li>
+        </ul>
+      </section>
+
+      <section class="accountlinks">
+        <ul>
+          <li><a href="#"><i class="fa-solid fa-user"></i></li></a>
+          <li><a href="#" class="signIn">Sign In</a></li>
+        </ul>
+      </section>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <div class="page-header text-center">
+        <h1><i class="fa-solid fa-coffee-pot"></i></i>Coffee Orders</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        
+      <div class="col-sm-6 entireForm">
+          
+        <h2 class="orders">Orders (Red check means order is completed)</h2>
+        <ul class="messages">
+        <% for(var i=0; i<messages.length; i++) {%>
+          <li class="message">
+            <span><%= messages[i].name %></span>
+            <span><%= messages[i].size %></span>
+            <span><%= messages[i].coffee %></span>
+            <span><%= messages[i].temp %></span>
+            <span><%= messages[i].sugar %></span>
+            
+            <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+
+            
+            <% if(messages[i].check === true) { %>
+                <span><i data-checkbox="true" class="fa-solid fa-check checkgreen strike" aria-hidden="true"></i></span> 
+              <% } else { %>
+                <span><i data-checkbox="false" class="fa-solid fa-check checkblack" aria-hidden="true"></i></span>
+              <% } %>
+          </li>
+        <% } %>
+        </ul>
+
+        <form class="coffeeorder" action="/messages" method="POST">
+            <div>
+              <h3>Name</h3>
+              <input type="text" placeholder="Name" name="name">  
+            </div>
+            
+            <div>
+              <h3>Size</h3>
+              <input type="radio" name="size" value="large">
+              <label for="large">Large</label>
+            
+              <input type="radio" name="size" value="medium">
+              <label for="medium">Medium</label>
+            
+              <input type="radio" name="size" value="small">
+              <label for="small">Small</label>
+            </div>
+           
+            <div>
+              <h3>Coffee Type</h3>
+              <input type="radio" name="coffee" value="espresso">
+              <label for="expresso">Espresso</label>
+              
+              <input type="radio" name="coffee" value="latte">
+              <label for="label">Latte</label>
+
+              <input type="radio" name="coffee" value="cappuccino">
+              <label for="cappuccino">Cappuccino</label>
+
+              <input type="radio" name="coffee" value="mocha">
+              <label for="mocha">Mocha</label>
+            </div>
+           
+            <div>
+              <h3>Hot or Ice</h3>
+              <input type="radio" name="temp" value="ice">
+              <label for="ice">Ice</label>
+
+              <input type="radio" name="temp" value="hot">
+              <label for="hot">Hot</label>
+            </div>
+
+            <div>
+              <h3>Sugar</h3>
+              <input type="radio" name="sugar" value="extra">
+              <label for="extra">Extra</label>
+
+              <input type="radio" name="sugar" value="regular">
+              <label for="regular">Regular</label>
+
+              <input type="radio" name="sugar" value="none">
+              <label for="none">No Sugar</label>
+            </div>
+            
+            <button type="submit">Submit Order</button>
+        </form>
+
+        <!-- <% if (user.local.email) { %>
+          <form action="/messages" method="POST">
+            <input type="text" value="<%= user.local.email %>" name="name">
+            <input type="text" placeholder="message" name="msg">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <% } %> -->
+          
+        <!-- LOCAL INFORMATION -->
+          <div class="col-sm-6 hidden">
+            <div class="well">
+                <h3><span class="fa fa-user" aria-hidden="true" ></span> Local</h3>
+
+                <% if (user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p>
+
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+
+            </div>
+          </div>
+  </div>
+
+
+
+
+
+  <!-- <footer>
+    <section>
+      <section class="footerLinks">
+        <div class="copyRight">
+          <span>&#169; Engee Fitness</span>
+        </div>
+        
+        <ul>
+          <li><a href="/index">Home |</a></li>
+          <li><a href="/workout">Workouts |</a></li>
+          <li><a href="/mealplan">Meal Plans</a></li>
+        </ul>
+      </section>
+    </section>
+  </footer> -->
+
+
+
+
+
+
+
+
+ <script src="main.js"></script> 
+</body>
+</html>

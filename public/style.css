@@ -1,0 +1,961 @@
+* {
+  box-sizing: border-box;
+}
+
+header, footer {
+    clear:both;
+}
+
+
+/* NAVVVVVVVVVVVV WEBSITE TEMPLATE*/
+
+nav {
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(3,85,153,1); 
+  height: 65px;
+  position:fixed;
+  width: 100%;  
+} 
+
+/* .introText {
+    width: 60%;
+}
+
+.max-w-7xl {
+    max-width: 35rem;
+} */
+
+.logo {
+    border: 2px solid red;
+    display:flex;
+    flex-direction: row;
+    float:left;
+    width: 20%;
+    height: 65px;
+}
+
+.logoPic {
+    border: 2px solid red;
+    height: 55px;
+    width: 55px;
+    margin-left: 50%;
+}
+
+.links {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    float:left;
+    width: 60%;
+    height: 64px;
+    padding-top: 1%;
+}
+
+
+.links ul {
+    border: 2px solid green;
+    width: 100%;
+    /* margin-left: 5%; */
+   
+}
+
+.links li {
+  border: 2px solid yellow;
+  list-style: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 15%;
+}
+
+.links a {
+   text-decoration: none;
+   color: white;
+}
+
+.accountlinks {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    height: 64px;
+    padding-top: 1%;
+}
+
+.accountlinks li {
+  list-style: none;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.accountlinks ul {
+    margin-left:25%;
+}
+
+.accountlinks a {
+    text-decoration: none;
+    color: white;
+}
+
+/* PROFILE LOGO*/
+.fa-solid {
+    color: white;
+}
+
+.signIn {
+    position: relative;
+    left: 10px;
+}
+
+/* NAVVVVVVVVVVVV WEBSITE TEMPLATE*/
+
+/* TOPPPPP SECTION TEMPLATE*/
+
+.topSection {
+    border: 2px solid black;
+    background-image: url(img/gymbackground.jpg);
+    background-size: 100%;
+    height: 500px;
+}
+
+.intro {
+    border: 2px solid transparent;
+    height: 107px;
+    width:  919px;
+    margin-left: 18%;
+    text-align: center;
+    margin-top: 7%;
+    color: white;
+}
+
+.intro h1 {
+    font-size: 78px;
+}
+
+.btn-primary {
+    margin-left: 45%;
+    margin-top: 5%;
+}
+
+/* TOPPPPP SECTION TEMPLATE*/
+
+/* BOTTOMMMM SECITON TEMPLATE */
+
+.bottomSection {
+   border: 2px solid transparent;
+   margin-top: 2%;
+}
+
+.sectionRight {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+    width: 50%;
+}
+
+.workout {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.sectionLeft {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+    width: 50%;
+}
+
+.sectionRight img {
+    margin-left: 7%;
+}
+
+.sectionLeft {
+    border: 2px solid transparent;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.text1 {
+    border: 2px solid transparent;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.text1 h2 {
+    font-size: 39px;
+    margin-top: 14%;
+    margin-left: 28%;
+}
+
+.text2 {
+    border: 2px solid transparent;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.text2 p {
+    width: 70%;
+    margin-left: 31%;
+    font-size: 18px;
+    margin-top: 3%;
+}
+
+.workoutButton {
+    margin-left: 45%;
+    margin-top: 1%;
+}
+
+.dietPlan {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.dietLeft {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: row;
+    height: 390px;
+    width: 50%;
+}
+
+.dietLeft img {
+    height: 344px;
+    width: 490px;
+    margin-left: 23%;
+    margin-top: 5%;
+
+}
+
+.dietRight {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 390px;
+    width: 50%;
+}
+
+.dietTextOne {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+}
+
+.dietTextOne h2 {
+    font-size: 39px;
+    margin-top: 18%;
+}
+
+.dietTextTwo {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+}
+
+.dietTextTwo p {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 70%;
+    font-size: 18px;
+    margin-left: 18%;
+}
+
+.dietButton {
+    margin-top: 1%;
+    margin-left: 40%;
+}
+/* BOTTOMMMM SECITON TEMPLATE */
+
+/* FOOOOOTERRRRRRR WEBSITE  TEMPLATE*/
+
+footer {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(3,85,153,1);
+    margin-top: 1%;
+}
+
+.copyRight {
+    border: 2px solid red;
+   font-size: 18px;
+   color: white;
+   margin-left: 2%
+}
+
+/* .footerLinks {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    float:left;
+    width: 100%;
+    height: 64px;
+    padding-top: 1%;
+}
+
+
+.footerLinks ul {
+    border: 2px solid green;
+    width: 100%;
+    /* margin-left: 5%; 
+   
+} 
+
+.footerLinks li {
+  border: 2px solid yellow;
+  list-style: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 10%;
+}
+
+.footerLinks a {
+   text-decoration: none;
+   color: black;
+} */
+
+
+.footerLinks {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+    padding-top: 1%;
+    
+}
+
+
+.footerLinks ul {
+    margin-left: 16%;
+    border: 2px solid green;
+    width: 48%;
+   
+}
+
+.footerLinks li {
+    border: 2px solid red;
+  list-style: none;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.footerLinks a {
+    border: 2px solid yellow;
+   text-decoration: none;
+   color: white;
+}
+
+/* FOOOOOTERRRRRRR WEBSITE TEMPLATE*/
+
+/* WORKOUT TEMPLATE PAGE */
+
+.workoutIntro {
+    border: 2px solid transparent;
+    height: 107px;
+    width:  919px;
+    margin-left: 18%;
+    text-align: center;
+    margin-top: 7%;
+    color: white;
+}
+
+.workoutIntro h1 {
+    font-size: 78px;
+}
+
+.topSection p {
+    font-size: 30px;
+    color:white;
+    width: 40%;
+    margin-left: 34%;
+}
+
+/* WOURKOUT PAGE SECTION */
+
+
+.topRow {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    margin-left: 18%;
+}
+
+.back {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 25%;
+}
+
+.abs {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 25%;
+}
+
+.bicep {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 25%;
+}
+
+.btnRow {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    margin-left: 18%;
+    margin-top: 2%;
+}
+
+.leg {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 25%;
+}
+
+.chest {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;  
+    height: 250px;
+    width: 25%;
+}
+
+.calisthenics {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 25%;
+}
+
+.imgBox {
+    border: 2px solid transparent;
+    height: 185px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+}
+
+.workoutText {
+    border: 2px solid transparent;
+    height: 61px;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 28%;
+    font-size: 20px;
+}
+
+/* WOURKOUT PAGE SECTION */
+
+/* WORKOUT TEMPLATE PAGE */
+
+/* MEAL PLANSSSSSSS PAGE */
+
+.topRowFood {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    margin-left: 6%;
+}
+
+.cleanEating {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 400px;
+}
+
+.ketoDiet {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 400px;
+}
+
+.fasting {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 400px;
+}
+
+.imgBoxDiet {
+    border: 2px solid transparent;
+    width: 397px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dietText {
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    margin-left: 35%;
+    padding-top: 1%;
+}
+
+/* MEAL PLANSSSSSSS PAGE */
+
+/* PROFILE PAGE */
+
+
+.accountContainer {
+    border: 2px solid transparent;
+    height: 579px;
+    width: 830px;
+    margin-left: 18%;
+}
+
+.accountBox {
+    border: 2px solid black;
+    height: 320px;
+    width: 550px;
+    margin-left: 18%;
+    margin-top: 19%;
+    border-radius: 10px;
+}
+
+.accountInput {
+    border: 2px solid transparent;
+    width: 440px;
+    height: 240px;
+    margin-top: 8%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accountEmail, .accountPassword {
+    width: 390px;
+    height: 40px;
+    margin-left: 5%;
+    margin-right: auto;
+    margin-top: 3%;
+    
+}
+
+.makeAccount {
+    border: 2px solid transparent;
+    height: 30px;
+    width: 150px;
+    margin-top: 5%;
+    margin-left: 33%;
+}
+
+#accountButton {
+    width: 393px;
+    position: relative;
+    right: 101%;
+    margin-top: 10%;
+}
+
+/* PROFILE PAGE */
+
+
+/* SIGN UP PAGE */
+
+.signupContainer {
+    border: 2px solid transparent;
+    /* background-color: lightgray; */    
+}
+
+.signupBox {
+    border: 2px solid transparent;
+    height: 494px;
+    width: 400px;
+    margin-top: 6%;
+    margin-left: 34%;
+    background-color: transparent;
+}
+
+.signupInput {
+    border: 2px solid black;
+    height: 390px;
+    width: 398px;
+    margin-top: 18%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.signupInput span {
+    color:red;
+    font-size: 11px;
+}
+
+.signupInput li {
+    list-style: none;
+    margin-top: 2%;
+}
+
+.signupForm {
+    width: 300px;
+    height: 40px;
+}
+
+#signUpButton {
+  margin-left: 23%;
+}
+
+
+
+/* SIGN UP PAGE */
+
+
+/* WORKOUT PAGE */
+
+.BackExercises {
+    text-align: center;
+}
+
+.RowBack {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.cleanEating {
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 50%;
+}
+
+.fasting {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 50%;
+}
+
+.imgBack {
+    border: 2px solid transparent;
+    width: 497px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.backText {
+    text-align: center;
+}
+
+.rowAbs {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+
+
+.something {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 50%;
+}
+
+.RowBack {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.cleanEating {
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 50%;
+}
+
+.fasting {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 50%;
+}
+
+.imgBack {
+    border: 2px solid transparent;
+    width: 497px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.backText {
+    text-align: center;
+}
+
+
+
+
+
+
+/* WORKOUT PAGE */
+
+
+/* PROFILE PAGE */
+
+.hidden {
+    visibility: none;
+}
+
+
+
+/* PROFILE PAGE */
+
+/* MEDIAAAAAA QUIERIES */
+
+@media (max-width: 1319px) and (min-width: 1246px) {
+    .text1 h2 {
+        margin-left: 30%;
+        margin-right: auto;
+    }
+
+    .dietTextOne h2 {
+        margin-left: 23%;
+        margin-right: auto;
+        width: 50%;
+        margin-top: 11%;
+    }
+
+    .dietTextTwo p {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    }
+}
+
+
+@media (max-width: 1245px) and (min-width: 1200px) {
+    .text1 h2 {
+        margin-left: 29%;
+        margin-right: auto;
+        width: 100%;
+    }
+    
+    
+    .dietTextOne h2 {
+        margin-left: 23%;
+        margin-right: auto;
+        width: 50%;
+        margin-top: 11%;
+        width: 70%;
+    }   
+
+    .dietTextTwo p {
+        margin-left: 18%;
+        margin-right: auto;
+        width: 70%;
+    }
+}
+
+
+@media(max-width: 1200px) and (min-width: 1100px) {
+    .intro {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .text1 h2 {
+        margin-left: 12%;;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .text2 p {
+       margin-left: auto;
+       margin-right: auto; 
+       width: 73%;
+    }
+
+    .dietTextOne h2 {
+        margin-left: 23%;
+        margin-right: auto;
+        width: 50%;
+        margin-top: 11%;
+        width: 70%;
+    } 
+
+    .dietTextTwo p {
+        margin-left: 18%;
+        margin-right: auto;
+        width: 70%;
+    }
+
+    .dietLeft img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media (max-width: 1099px) and (min-width: 858px) {
+    .intro {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .topSection button {
+        margin-top: 20%;
+    }
+
+    .link {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text1 h2 {
+        margin-left: 12%;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .text2 p {
+        margin-left: auto;
+        margin-right: auto; 
+        width: 73%;
+     }
+     
+     .text2 button {
+        margin-left:29%;
+        margin-top: 1%;
+    }
+
+    .dietTextOne h2 {
+        margin-left: 28%;
+        margin-right: auto;
+        width: 50%;
+        margin-top: 11%;
+        width: 70%;
+    } 
+
+    .dietTextTwo p {
+        margin-left: 25%;
+        margin-right: auto;
+        width: 70%;
+    }
+
+    .dietTextTwo button {
+        margin-top: 4%;
+    }
+
+    .dietLeft img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media (max-width: 858px) and (min-width: 800px) {
+    .intro {
+        margin-left: auto;
+        margin-right: auto;
+        /* width: 90%; */
+    }
+
+    .topSection button {
+        margin-top: 20%;
+    }
+
+    .link {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text1 h2 {
+        margin-left: 12%;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .text2 p {
+        margin-left: auto;
+        margin-right: auto; 
+        width: 73%;
+     }
+     
+     .text2 button {
+        margin-left:29%;
+        margin-top: 1%;
+    }
+
+    .dietTextOne h2 {
+        margin-left: 28%;
+        margin-right: auto;
+        width: 50%;
+        margin-top: 11%;
+        width: 70%;
+    } 
+
+    .dietTextTwo p {
+        margin-left: 25%;
+        margin-right: auto;
+        width: 70%;
+    }
+
+    .dietTextTwo button {
+        margin-top: 4%;
+    }
+
+    .dietLeft img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+
+
+/* MEDIAAAAAA QUIERIES */
