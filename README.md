@@ -1,7 +1,8 @@
-<<<<<<< HEAD
+
 I am very passionate about health and being able to be the best you can in life! With this project i've created a full stack fitness application where users can look up free various workouts and foot diets. Users have the ability to create their own account where they can keep track of their weight and workouts to they include into their daily life.
 
-<img src="img/gymreadme.jpeg"
+![gymreadme](https://user-images.githubusercontent.com/107250690/201419244-70b6b64f-ea41-4097-8fed-1e727b6f783d.jpeg)
+
 
 
 How It's Made:
@@ -13,6 +14,6 @@ How I built this project is using HTML and CSS for markup text and styling. I us
 LESSON LEARNED:
 
 The lesson I learned is the process of using Node.js, Express, and MongoDB to save information to my database. I learned more about Javascript and how powerful it is in the client and server side. I am excited to create more projects!
-=======
 
->>>>>>> 5267570a808e1f0ebbdfbd41c7b422deb9bb7419
+
+
