@@ -558,13 +558,27 @@ footer {
 
 .cleanEatingTxt {
     border: 2px solid green;
-    margin-left: 10%;
+    margin-left: 16%;
+    margin-top: 1%;
     width: 75%;
 }
 
 .cleanEatingTxt li {
     margin-left: 35%;
 }
+
+.ketoDietSection {
+    border: 2px solid blue;
+    margin-top: 1%;
+}
+
+.ketoTxt {
+    border: 2px solid red;
+    width: 74%;
+    margin-left: 17%; 
+}
+
+
 
 /*============================= */
 /*=== MEAL PLANSSSSSSS PAGE === */
