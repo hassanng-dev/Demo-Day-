@@ -15,8 +15,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
 var nodemon = require('nodemon')
+// const mongo = require("mongodb")
 
 var configDB = require('./config/database.js');
+// const methodOverride = require('method-override')
 
 var db
 

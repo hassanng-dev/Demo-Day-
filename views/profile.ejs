@@ -11,6 +11,9 @@
 </head>
 <body>
  
+        
+  <%let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] %>   
+
   <header>
     <nav>
       <section class="logo">
@@ -19,124 +22,171 @@
     
       <section class="links">
         <ul>
-          <li><a href="/index">Home</a></li>
-          <li><a href="/workout">Workouts</a></li>
-          <li><a href="/mealplan">Meal Plans</a></li>
-        </ul>
+           <li><a href="/index">Home</a></li>
+           <li><a href="/workout">Workouts</a></li>
+           <li><a href="/mealplan">Meal Plans</a></li>
+         </ul>
       </section>
 
       <section class="accountlinks">
         <ul>
-          <li><a href="#"><i class="fa-solid fa-user"></i></li></a>
-          <li><a href="#" class="signIn">Sign In</a></li>
+          <li><a href="/login"><i class="fa-solid fa-user"></i></li></a>
+          <li><a href="/login" class="signIn">Sign In</a></li>
         </ul>
       </section>
     </nav>
   </header>
-
-  <div class="container">
-
-    <div class="page-header text-center">
-        <h1><i class="fa-solid fa-coffee-pot"></i></i>Coffee Orders</h1>
-        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
-    </div>
-
-    <div class="row">
-
-        
-      <div class="col-sm-6 entireForm">
           
-        <h2 class="orders">Orders (Red check means order is completed)</h2>
-        <ul class="messages">
-        <% for(var i=0; i<messages.length; i++) {%>
-          <li class="message">
-            <span><%= messages[i].name %></span>
-            <span><%= messages[i].size %></span>
-            <span><%= messages[i].coffee %></span>
-            <span><%= messages[i].temp %></span>
-            <span><%= messages[i].sugar %></span>
+  <section class="mealSection">
+    <section>
+      <form class="dailyMeal" action="/info" method="POST">
+        
+        <div class="dates">
+          <h3>Meals Of The Day</h3>
+          <select name="day">
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
+            <option>Sunday</option>
             
-            <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+          </select>
+          <select name="meal">
+            <option>Breakfast</option>
+            <option>Lunch</option>
+            <option>Dinner</option>
+            <option>Snack</option>
+          </select>
+        </div>
+        
+        <div class="meal"> 
+          <div class="input">
+            <span>Name Of Meal</span>
+          </div>
+          
+          <div id="mealTxt">
+            <input type="text" placeholder="Input Meal" name="name"> 
+          </div>
+        </div>
+        
+        <div class="calories">
+          <div class="input">
+            <span>Calories</span>
+          </div>
+          
+          <div class="txtInput">
+            <input type="number" placeholder="Calories" name="calories"> grams
+          </div>
+        </div>
+       
+        <div class="protein">
+          <div class="input">
+            <span>Protein</span>
+          </div>
+          
+          <div class="txtInput">
+           <input type="number" placeholder="Protein" name="protein"> grams
+          </div>
+        </div>
+       
+        <div class="carbs">
+          <div class="input">
+            <span>Carbs</span>
+          </div>
+          
+          <div class="txtInput">
+            <input type="number" placeholder="Carbs" name="carbs"> grams
+          </div>
+        </div>
+        
+        <div class="fats">
+          <div class="input">
+            <span>Fats</span>
+          </div>
+          
+          <div class="txtInput">
+            <input type="number" placeholder="Fats" name="fats"> grams
+          </div>
+        </div>
+        
+        <div class="options">
+          <span class="input">
+            <span>Did you enjoy it?</span>
+          </span>
+          
+          <div class="txtInput">
+            <select name="option">
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+         
+        </div>
+        
+        <button type="submit">Keep Track</button>
+      </form>
+    </section>
+  </section>
 
+  <section class="mealSection">
+    <h2 class="orders">Meals Of the Week</h2>
+    <ul class="messages">
+          
             
-            <% if(messages[i].check === true) { %>
-                <span><i data-checkbox="true" class="fa-solid fa-check checkgreen strike" aria-hidden="true"></i></span> 
-              <% } else { %>
-                <span><i data-checkbox="false" class="fa-solid fa-check checkblack" aria-hidden="true"></i></span>
+              <% for(let x = 0; x < days.length; x++) { %>
+                <section class="daysContainer">
+
+                
+                  <section class="daysSection">
+                    <h2><%= days[x] %></h2>
+                
+                
+                    <% for(var i=0; i < info.length; i++) {%>
+                 
+                    <% if(info[i].day === days[x]) {%>
+                  <section class="daysTxt">
+                    <li><span><%= info[i].day %></span></li>
+                    <li><span><%= info[i].meal %></span></li>
+                    <li><span><%= info[i].name %></span></li>
+                    <li><span><%= info[i].calories %> calorie(s) </span></li>
+                    <li><span><%= info[i].protein %> grams of protein </span></li>
+                    <li><span><%= info[i].carbs %> gram(s) of carbs </span></li>
+                    <li><span><%= info[i].fats %> gram(s) of fat </span></li>
+                    <li><span><%= info[i].option %></span></li>
+                    
+                    
+                    <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+
+                    <% if(info[i].check === true) { %>
+                      <span><i data-checkbox="true" class="fa-solid fa-heart checkgreen strike" aria-hidden="true"></i></span> 
+                    <% } else { %>
+                      <span><i data-checkbox="false" class="fa-solid fa-heart checkblack" aria-hidden="true"></i></span>
+                    <% } %>
+                  </section>
+                    <% } %>
+                  
+                    <% } %>
+                </section>
               <% } %>
-          </li>
-        <% } %>
-        </ul>
+    </ul>
+  </section>
 
-        <form class="coffeeorder" action="/messages" method="POST">
-            <div>
-              <h3>Name</h3>
-              <input type="text" placeholder="Name" name="name">  
-            </div>
-            
-            <div>
-              <h3>Size</h3>
-              <input type="radio" name="size" value="large">
-              <label for="large">Large</label>
-            
-              <input type="radio" name="size" value="medium">
-              <label for="medium">Medium</label>
-            
-              <input type="radio" name="size" value="small">
-              <label for="small">Small</label>
-            </div>
-           
-            <div>
-              <h3>Coffee Type</h3>
-              <input type="radio" name="coffee" value="espresso">
-              <label for="expresso">Espresso</label>
-              
-              <input type="radio" name="coffee" value="latte">
-              <label for="label">Latte</label>
-
-              <input type="radio" name="coffee" value="cappuccino">
-              <label for="cappuccino">Cappuccino</label>
-
-              <input type="radio" name="coffee" value="mocha">
-              <label for="mocha">Mocha</label>
-            </div>
-           
-            <div>
-              <h3>Hot or Ice</h3>
-              <input type="radio" name="temp" value="ice">
-              <label for="ice">Ice</label>
-
-              <input type="radio" name="temp" value="hot">
-              <label for="hot">Hot</label>
-            </div>
-
-            <div>
-              <h3>Sugar</h3>
-              <input type="radio" name="sugar" value="extra">
-              <label for="extra">Extra</label>
-
-              <input type="radio" name="sugar" value="regular">
-              <label for="regular">Regular</label>
-
-              <input type="radio" name="sugar" value="none">
-              <label for="none">No Sugar</label>
-            </div>
-            
-            <button type="submit">Submit Order</button>
-        </form>
-
+       
+        
         <!-- <% if (user.local.email) { %>
           <form action="/messages" method="POST">
-            <input type="text" value="<%= user.local.email %>" name="name">
-            <input type="text" placeholder="message" name="msg">
+            <input type="number" value="<%= user.local.email %>" name="name">
+            <input type="number" placeholder="message" name="msg">
             <button type="submit">Submit</button>
           </form>
         </div>
         <% } %> -->
           
         <!-- LOCAL INFORMATION -->
-          <div class="col-sm-6 hidden">
-            <div class="well">
+          <section class="localInfo">
+            <div>
                 <h3><span class="fa fa-user" aria-hidden="true" ></span> Local</h3>
 
                 <% if (user.local.email) { %>
@@ -152,29 +202,52 @@
                 <% } %>
 
             </div>
-          </div>
-  </div>
+          </section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
 
 
-  <!-- <footer>
-    <section>
-      <section class="footerLinks">
-        <div class="copyRight">
-          <span>&#169; Engee Fitness</span>
-        </div>
-        
-        <ul>
-          <li><a href="/index">Home |</a></li>
-          <li><a href="/workout">Workouts |</a></li>
-          <li><a href="/mealplan">Meal Plans</a></li>
-        </ul>
-      </section>
-    </section>
-  </footer> -->
-
+          <footer>
+            <section>
+              <section class="footerLinks">
+                <div class="copyRight">
+                  <span>&#169; Engee Fitness</span>
+                </div>
+                
+                <ul>
+                  <li><a href="/index">Home</a></li>
+                  <li><a href="/workout">Workouts</a></li>
+                  <li><a href="/mealplan">Meal Plans</a></li>
+                </ul>
+              </section>
+            </section>
+          </footer>
 
 
 

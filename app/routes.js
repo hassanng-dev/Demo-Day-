@@ -9,40 +9,41 @@ module.exports = function(app, passport, db) {
 
     app.get('/index', function(req, res) {
       res.render('index.ejs');
-  });
+    });
 
     app.get('/workout', function(req, res) {
-    res.render('workout.ejs');
-});
+      res.render('workout.ejs');
+    });
 
     app.get('/mealplan', function(req, res) {
-    res.render('mealplan.ejs');
-});
+      res.render('mealplan.ejs');
+    });
 
-app.get('/signup', function(req, res) {
-  res.render('signup.ejs');
-});
+    app.get('/signup', function(req, res) {
+      res.render('signup.ejs');
+    });
 
-app.get('/login', function(req, res) {
-  res.render('login.ejs');
-});
+    app.get('/login', function(req, res) {
+      res.render('login.ejs');
+    });
 
 // app.get('/profile', function(req, res) {
 //   res.render('profile.ejs');
 // });
 
 
-  
+
+
 
   
 
-     // PROFILE SECTION =========================
+// PROFILE SECTION =========================
      app.get('/profile', isLoggedIn, function(req, res) {
       db.collection('messages').find({user: req.user.local.email}).toArray((err, result) => {
         if (err) return console.log(err)
         res.render('profile.ejs', {
           user : req.user,
-          messages: result
+          info: result
         })
       })
   });
@@ -57,37 +58,59 @@ app.get('/login', function(req, res) {
 
 // message board routes ===============================================================
 
-  app.post('/messages', (req, res) => {
-    console.log(req.body)
-    db.collection('messages').save({user: req.user.local.email, name: req.body.name, size: req.body.size, coffee: req.body.coffee, temp: req.body.temp, sugar: req.body.sugar, check: false}, (err, result) => {
-      if (err) return console.log(err)
-      console.log('saved to database')
-      res.redirect('/profile')
-    })
+app.post('/info', (req, res) => {
+  console.log(req.body)
+  db.collection('messages').save({user: req.user.local.email, day: req.body.day, meal: req.body.meal, name: req.body.name, calories: req.body.calories, protein: req.body.protein, carbs: req.body.carbs, fats: req.body.fats, option: req.body.option, check: false}, (err, result) => {
+    if (err) return console.log(err)
+    console.log('saved to database')
+    res.redirect('/profile')
   })
+})
 
-  app.put('/check', (req, res) => {
-    db.collection('messages')
-    .findOneAndUpdate({name: req.body.name, coffee: req.body.coffee}, {
-      $set: {
-        check: !req.body.check
-      }
-    }, {
-      sort: {_id: -1},
-      upsert: true
-    }, (err, result) => {
-      if (err) return res.send(err)
-      res.send(result)
-    })
+app.put('/check', (req, res) => {
+  db.collection('messages')
+  .findOneAndUpdate({day: req.body.day, meal: req.body.meal, name: req.body.name}, {
+    $set: {
+      check: !req.body.check
+    }
+  }, {
+    sort: {_id: -1},
+    upsert: false
+  }, (err, result) => {
+    if (err) return res.send(err)
+    res.send(result)
   })
+})
 
-  app.delete('/messages', (req, res) => {
-    db.collection('messages').findOneAndDelete({name: req.body.name, size: req.body.size, coffee: req.body.coffee, temp: req.body.temp, sugar: req.body.sugar}, (err, result) => {
-      if (err) return res.send(500, err)
-      res.send('Message deleted!')
-    })
+// app.put("/check", (req, res) => {
+//   console.log(req.body.check)
+//   const check = req.body.check == 'true' ? true: false
+//   console.log(check)
+//   db.collection("items").findOneAndUpdate(
+//     { _id: mongo.ObjectID(req.body.grabId)},
+//     {
+//       $set: {
+//         check: check,
+        
+//       },
+//     },
+//     {
+//       sort: { _id: -1 },
+//       upsert: true,
+//     },
+//     (err, result) => {
+//       if (err) return res.send(err);
+//       res.send(result);
+//     }
+//   );
+// });
+
+app.delete('/info', (req, res) => {
+  db.collection('messages').findOneAndDelete({day: req.body.day, meal: req.body.meal, name: req.body.name}, (err, result) => {
+    if (err) return res.send(500, err)
+    res.send('Message deleted!')
   })
-
+})
 // =============================================================================
 // AUTHENTICATE (FIRST LOGIN) ==================================================
 // =============================================================================
