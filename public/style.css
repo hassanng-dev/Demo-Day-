@@ -542,6 +542,9 @@ footer {
 
 .mealPlanTitle {
     text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .dietPics {
@@ -558,13 +561,12 @@ footer {
 
 .cleanEatingTxt {
     border: 2px solid green;
-    margin-left: 16%;
     margin-top: 1%;
-    width: 75%;
+    width: 100%;
 }
 
 .cleanEatingTxt li {
-    margin-left: 35%;
+    margin-left: 28%;
 }
 
 .ketoDietSection {
@@ -573,9 +575,17 @@ footer {
 }
 
 .ketoTxt {
+    margin-top: 1%;
     border: 2px solid red;
-    width: 74%;
-    margin-left: 17%; 
+    width: 100%;
+}
+
+.ketoTxt h3, h2 {
+    text-align: center;
+}
+
+.fastingTxt h3 {
+    text-align: center;
 }
 
 
