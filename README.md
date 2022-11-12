@@ -1,5 +1,5 @@
 
-I am very passionate about health and being able to be the best you can in life! With this project i've created a full stack fitness application where users can look up free various workouts and foot diets. Users have the ability to create their own account where they can keep track of their weight and workouts to they include into their daily life.
+I am very passionate about health and being able to be the best you can in life! With this project i've created a full stack fitness application where users can look up free various workouts and food diets. Users have the ability to create their own account where they can keep track of their weight and workouts to they include into their daily life.
 
 
 ![gymreadme](https://user-images.githubusercontent.com/107250690/201419244-70b6b64f-ea41-4097-8fed-1e727b6f783d.jpeg)
