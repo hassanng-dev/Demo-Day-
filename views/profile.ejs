@@ -36,117 +36,119 @@
       </section>
     </nav>
   </header>
-          
-  <section class="mealSection">
-    <section>
-      <form class="dailyMeal" action="/info" method="POST">
-        
-        <div class="dates">
-          <h3>Meals Of The Day</h3>
-          <select name="day">
-            <option>Monday</option>
-            <option>Tuesday</option>
-            <option>Wednesday</option>
-            <option>Thursday</option>
-            <option>Friday</option>
-            <option>Saturday</option>
-            <option>Sunday</option>
-            
-          </select>
-          <select name="meal">
-            <option>Breakfast</option>
-            <option>Lunch</option>
-            <option>Dinner</option>
-            <option>Snack</option>
-          </select>
-        </div>
-        
-        <div class="meal"> 
-          <div class="input">
-            <span>Name Of Meal</span>
-          </div>
-          
-          <div id="mealTxt">
-            <input type="text" placeholder="Input Meal" name="name"> 
-          </div>
-        </div>
-        
-        <div class="calories">
-          <div class="input">
-            <span>Calories</span>
-          </div>
-          
-          <div class="txtInput">
-            <input type="number" placeholder="Calories" name="calories"> grams
-          </div>
-        </div>
        
-        <div class="protein">
-          <div class="input">
-            <span>Protein</span>
-          </div>
+  <section class="calorieTracker">
+    
+      <section class="dailyMealForm">
+        <form class="dailyMeal" action="/info" method="POST">
           
-          <div class="txtInput">
-           <input type="number" placeholder="Protein" name="protein"> grams
-          </div>
-        </div>
-       
-        <div class="carbs">
-          <div class="input">
-            <span>Carbs</span>
-          </div>
-          
-          <div class="txtInput">
-            <input type="number" placeholder="Carbs" name="carbs"> grams
-          </div>
-        </div>
-        
-        <div class="fats">
-          <div class="input">
-            <span>Fats</span>
-          </div>
-          
-          <div class="txtInput">
-            <input type="number" placeholder="Fats" name="fats"> grams
-          </div>
-        </div>
-        
-        <div class="options">
-          <span class="input">
-            <span>Did you enjoy it?</span>
-          </span>
-          
-          <div class="txtInput">
-            <select name="option">
-              <option>Yes</option>
-              <option>No</option>
+          <div class="dates">
+            <h3>Meals Of The Day</h3>
+            <select name="day">
+              <option>Monday</option>
+              <option>Tuesday</option>
+              <option>Wednesday</option>
+              <option>Thursday</option>
+              <option>Friday</option>
+              <option>Saturday</option>
+              <option>Sunday</option>
+              
+            </select>
+            <select name="meal">
+              <option>Breakfast</option>
+              <option>Lunch</option>
+              <option>Dinner</option>
+              <option>Snack</option>
             </select>
           </div>
+          
+          <div class="meal"> 
+            <div class="input">
+              <span>Name Of Meal</span>
+            </div>
+            
+            <div id="mealTxt">
+              <input type="text" placeholder="Enter Your Meal" name="name"> 
+            </div>
+          </div>
+          
+          <div class="calories">
+            <div class="input">
+              <span>Calories</span>
+            </div>
+            
+            <div class="txtInput">
+              <input type="number" placeholder="Calories" name="calories"> grams
+            </div>
+          </div>
          
-        </div>
-        
-        <button type="submit">Keep Track</button>
-      </form>
-    </section>
+          <div class="protein">
+            <div class="input">
+              <span>Protein</span>
+            </div>
+            
+            <div class="txtInput">
+             <input type="number" placeholder="Protein" name="protein"> grams
+            </div>
+          </div>
+         
+          <div class="carbs">
+            <div class="input">
+              <span>Carbs</span>
+            </div>
+            
+            <div class="txtInput">
+              <input type="number" placeholder="Carbs" name="carbs"> grams
+            </div>
+          </div>
+          
+          <div class="fats">
+            <div class="input">
+              <span>Fats</span>
+            </div>
+            
+            <div class="txtInput">
+              <input type="number" placeholder="Fats" name="fats"> grams
+            </div>
+          </div>
+          
+          <div class="options">
+            <div class="input">
+              <span>Did you enjoy it?</span>
+            </div>
+            
+            <div class="txtInput">
+              <select name="option">
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+           
+          </div>
+          
+          <button type="submit">Keep Track</button>
+         
+        </form>
+      </section>
   </section>
+    
+ 
+  
 
-  <section class="mealSection">
+  <section class="mealSectionBtn">
     <h2 class="orders">Meals Of the Week</h2>
     <ul class="messages">
           
-            
-              <% for(let x = 0; x < days.length; x++) { %>
-                <section class="daysContainer">
+      <% for(let x = 0; x < days.length; x++) { %>
+        <section class="daysContainer">
 
+          <section class="daysSection">
+            <h2><%= days[x] %></h2>
                 
-                  <section class="daysSection">
-                    <h2><%= days[x] %></h2>
-                
-                
-                    <% for(var i=0; i < info.length; i++) {%>
+                <% for(var i=0; i < info.length; i++) {%>
                  
-                    <% if(info[i].day === days[x]) {%>
-                  <section class="daysTxt">
+                <% if(info[i].day === days[x]) {%>
+                <section class="daysTxt">
                     <li><span><%= info[i].day %></span></li>
                     <li><span><%= info[i].meal %></span></li>
                     <li><span><%= info[i].name %></span></li>
@@ -164,12 +166,13 @@
                     <% } else { %>
                       <span><i data-checkbox="false" class="fa-solid fa-heart checkblack" aria-hidden="true"></i></span>
                     <% } %>
-                  </section>
+                </section>
                     <% } %>
                   
                     <% } %>
-                </section>
+          </section>
               <% } %>
+        </section>
     </ul>
   </section>
 
@@ -185,7 +188,7 @@
         <% } %> -->
           
         <!-- LOCAL INFORMATION -->
-          <section class="localInfo">
+          <!-- <section class="localInfo">
             <div>
                 <h3><span class="fa fa-user" aria-hidden="true" ></span> Local</h3>
 
@@ -202,7 +205,7 @@
                 <% } %>
 
             </div>
-          </section>
+          </section> -->
   
   
   
@@ -237,7 +240,7 @@
             <section>
               <section class="footerLinks">
                 <div class="copyRight">
-                  <span>&#169; Engee Fitness</span>
+                  <span>&#169; Engee Wellness</span>
                 </div>
                 
                 <ul>

@@ -51,6 +51,7 @@ nav {
 .links ul {
     border: 2px solid transparent;
     width: 100%;
+    margin-left: 9%;
 }
 
 .links li {
@@ -121,19 +122,30 @@ nav {
     border: 2px solid transparent;
     height: 107px;
     width:  919px;
-    margin-left: 18%;
+    margin-left: 13%;
     text-align: center;
-    margin-top: 15%;
+    margin-top: 9%;
     color: white;
 }
 
 .intro h1 {
     font-size: 78px;
+    width: 105%;
+}
+
+.topSection h2 {
+    font-size: 50px;
+    color: white;
+    
 }
 
 .btn-primary {
     margin-left: 45%;
     margin-top: 5%;
+}
+
+.introText {
+    margin-left: 36%;
 }
 
 /* ======================= */
@@ -340,9 +352,8 @@ footer {
 
 
 .footerLinks ul {
-    /* margin-left: -5%; */
+    margin-left: 9%;
     border: 2px solid transparent;
-    /* width: 48%; */
     width: 100%;
     padding-top: .5%;
    
@@ -354,7 +365,7 @@ footer {
     list-style: none;
     display: inline-block;
     font-size: 20px;
-    margin-left: 12%;
+    margin-left: 10%;
     font-size: 20px;
   }
 
@@ -379,7 +390,7 @@ footer {
     width:  919px;
     margin-left: 18%;
     text-align: center;
-    margin-top: 7%;
+    margin-top: 9%;
     color: white;
 }
 
@@ -404,7 +415,7 @@ footer {
     flex-direction: row;
     column-gap: 15px;
     margin-left: 18%;
-    /* margin-top:1%; */
+    
 }
 
 .back {
@@ -473,13 +484,40 @@ footer {
 }
 
 .workoutText {
-    border: 2px solid transparent;
-    height: 61px;
-    width: 160px;
+    border: 2px solid black;
+    height: 40px;
+    width: 120px;
     display: flex;
     flex-direction: column;
     margin-left: 28%;
     font-size: 20px;
+}
+
+
+ol li {
+    list-style: none;
+}
+
+.sectionOneMuscle, 
+.sectionTwoMuscle, 
+.sectionThreeMuscle, 
+.sectionFourMuscle, 
+.sectionFiveMuscle, 
+.sectionSixMuscle {
+    text-align: center;
+}
+
+::first-letter .sectionOneMuscle, 
+.sectionTwoMuscle, 
+.sectionThreeMuscle, 
+.sectionFourMuscle, 
+.sectionFiveMuscle, 
+.sectionSixMuscle {
+    text-transform:capitalize;
+}
+
+.chestButton, .trapsButton, .glutesButton, .bicepsButton {
+    padding-left: 10%;
 }
 
 /* ====================== */
@@ -492,7 +530,119 @@ footer {
 /*==== MEAL PLANSSSSSSS PAGE=== */
 /*============================ */
 
-.topRowFood {
+.nutrionAPI {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* display: flex;
+    flex-direction: column; */
+    
+  }
+
+  .apiInfoBox {
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width:27%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+  }
+
+  .apiInfoBox ul {
+    list-style: none;
+  }
+
+  .apiInfoBox h3 {
+    text-align: center;
+  }
+
+  .getInfo {
+    border: 2px solid transparent;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    }
+
+  .apiInfo {
+    border: 2px solid black;
+    margin-top: 3%;
+    margin-left: 15%;
+    margin-right: auto;
+    width: 70%;
+    text-align: center;
+   }
+
+   .warningMsg {
+    color:red;
+    margin-left: 4%;
+   }
+
+   .apiInput {
+    border: 2px solid transparent;
+    font-size: 19px;
+    width: 100%;
+    color: rgb(3,85,153,1);
+    margin-left: 21%;
+    margin-right: auto;
+   }
+
+   .displayAPI {
+    border: 2px solid black;
+    margin-left: 28.5%;
+    margin-right: auto;
+    margin-bottom: 5%;
+    width: 35%;
+    }
+
+    .macrosSection {
+        border: 2px solid black;
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+    }
+    
+    .macros {
+        
+        border: 2px solid transparent;
+        border-radius: 10px;
+        margin-top: 2%;
+       
+        margin-bottom: 6%;
+    }
+ 
+    .macros h2 {
+        margin-left: 28%;
+    }
+    
+    .macros li {
+        margin-left: 27%;
+    }
+    
+    .createMeal {
+        margin-left: 33%;
+        margin-bottom: 4%;
+    }
+
+    .macroBoxes {
+        border: 2px solid black;
+        border-radius: 10px;
+        margin-top: 2%;
+        box-shadow: 5px 5px 5px black;
+        margin-bottom: 6%;
+    }
+
+    .macroList {
+        width: 40%;
+    }
+
+
+/* .topRowFood {
     border: 2px solid transparent;
     display: flex;
     flex-direction: row;
@@ -586,7 +736,7 @@ footer {
 
 .fastingTxt h3 {
     text-align: center;
-}
+} */
 
 
 
@@ -645,6 +795,8 @@ footer {
     right: 101%;
     margin-top: 10%;
 }
+
+
 
 /* PROFILE PAGE */
 
@@ -841,6 +993,7 @@ header h1 {
     border: 2px solid transparent;
     margin-left: 5%;
     list-style-position: inside;
+    margin-left: 10%;
    
   }
   
@@ -865,23 +1018,90 @@ header h1 {
 /* ======= MEALS OF THE DAY INPUTS ======= */
 /* ======================================= */
   
-  .mealSection {
-    
-    margin-right: auto;
+  .calorieTracker {
     border: 2px solid transparent;
+    display: flex;
+    background-image: url(img/nutrients.jpeg);
+    background-size: 100%;
+  }
+
+  /* .nutrionAPI {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .apiInfoBox {
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 11%;
+  }
+
+  .apiInfoBox ul {
+    list-style: none;
+  }
+
+  .apiInfoBox h3 {
+    text-align: center;
+  }
+
+  .getInfo {
+    border: 2px solid black;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    width: 30%;
+    }
+
+  .apiInfo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-align: center;
+   }
+
+   .apiInput {
+    border: 2px solid transparent;
+    font-size: 19px;
     width: 100%;
-    margin-top: 1%;
+    margin-top: 7%;
+    color: rgb(3,85,153,1);
+    margin-left: 21%;
+    margin-right: auto;
+     
+  }*/
+
+  .dailyMealForm {
+    border: 2px solid transparent;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+
   }
   
   .dailyMeal {
     border: 2px solid black;
-    width: 25%;
+    width: 50%;
     height: auto;
     text-align: center;
-    margin-left: 35%;
+    margin-left: 30%;
     margin-top: 6%;
     border-radius: 10px;
     box-shadow: 5px 5px 5px black;
+    
   }
   
   .dailyMeal button {
@@ -901,7 +1121,7 @@ header h1 {
   }
   
   #mealTxt {
-    margin-left: 27%;
+    margin-left: 22%;
     width: 35%;
     text-align: center;
     margin-top: 3%;
@@ -916,7 +1136,8 @@ header h1 {
     font-size: 19px;
     width: 100%;
     margin-top: 1%;
-    color: rgb(3,85,153,1);
+    color: black;
+    font-weight: bold;
   }
   
   .meal {
@@ -972,6 +1193,43 @@ header h1 {
     box-shadow: 5px 5px 5px black;
     margin-bottom: 6%;
   }
+
+  .apiCalories {
+    margin-right: 16%;
+    border: 2px solid black;
+    height: 43px;
+    margin-top: 6%;
+    font-size: 25px;
+    padding-top: 1%;
+  }
+
+  .apiProtein {
+    margin-right: 16%;
+    border: 2px solid black;
+    height: 43px;
+    margin-top: 6%;
+    font-size: 25px;
+    padding-top: 1%;
+  }
+
+  .apiCarbs {
+    margin-right: 16%;
+    border: 2px solid black;
+    height: 43px;
+    margin-top: 6%;
+    font-size: 25px;
+    padding-top: 1%;
+  }
+
+  .apiFats {
+    margin-right: 16%;
+    border: 2px solid black;
+    height: 43px;
+    margin-top: 6%;
+    font-size: 25px;
+    padding-top: 1%;
+  }
+ 
   
   
 /* ======================================= */
@@ -1000,6 +1258,10 @@ header h1 {
 
 /* MEDIAAAAAA QUIERIES */
 
+
+/* ============================== */
+/* ========== HOME PAGE ========= */
+/* ============================== */
 @media (max-width: 1319px) and (min-width: 1246px) {
     .text1 h2 {
         margin-left: 30%;
