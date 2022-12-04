@@ -1,9 +1,9 @@
 
 var trash = document.getElementsByClassName("fa-trash-o");
+var deleteMacro = document.getElementsByClassName("deleteButton");
+var saveMacro = document.getElementsByClassName("saveButton");
 var check = document.getElementsByClassName("fa-heart");
-document.querySelector('.getInfo').addEventListener('click', getInfo);
-document.querySelector('.displayAPI').addEventListener('click', displayMacros);
-document.querySelector('.createMeal').addEventListener('click', createMeal);
+console.log("main.js page",check)
 
 let totalCalories = 0
 let mealName = " "
@@ -13,6 +13,44 @@ let totalFats = 0
 let counter = 0
 
 //meal tracker begins
+
+
+Array.from(check).forEach(function(element) {
+  console.log(element)
+  element.addEventListener('click', function(){
+    console.log("clicked")
+    const day = this.parentNode.parentNode.childNodes[1].innerText
+    const meal = this.parentNode.parentNode.childNodes[3].innerText
+    const name = this.parentNode.parentNode.childNodes[5].innerText
+    const calories = this.parentNode.parentNode.childNodes[7].innerText
+    const protein = this.parentNode.parentNode.childNodes[9].innerText
+    const carbs = this.parentNode.parentNode.childNodes[11].innerText
+    const fats = this.parentNode.parentNode.childNodes[13].innerText
+    const option = this.parentNode.parentNode.childNodes[15].innerText
+    const checkIcon = this.dataset.checkbox === 'true'
+    fetch('check', {
+      method: 'put',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        'day': day,
+        'meal': meal,
+        'name': name,
+        'calories': calories,
+        'protein': protein,
+        'carbs': carbs,
+        'fats': fats,
+        'option': option,
+        'check' : checkIcon
+
+      })
+    }).then(function (response) {
+      window.location.reload()
+    })
+  });
+});
+
 
 Array.from(trash).forEach(function(element) {
      
@@ -51,40 +89,7 @@ Array.from(trash).forEach(function(element) {
       });
 });
 
-Array.from(check).forEach(function(element) {
-  element.addEventListener('click', function(){
-    console.log("clicked")
-    const day = this.parentNode.parentNode.childNodes[1].innerText
-    const meal = this.parentNode.parentNode.childNodes[3].innerText
-    const name = this.parentNode.parentNode.childNodes[5].innerText
-    const calories = this.parentNode.parentNode.childNodes[7].innerText
-    const protein = this.parentNode.parentNode.childNodes[9].innerText
-    const carbs = this.parentNode.parentNode.childNodes[11].innerText
-    const fats = this.parentNode.parentNode.childNodes[13].innerText
-    const option = this.parentNode.parentNode.childNodes[15].innerText
-    const checkIcon = this.dataset.checkbox === 'true'
-    fetch('check', {
-      method: 'put',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        'day': day,
-        'meal': meal,
-        'name': name,
-        'calories': calories,
-        'protein': protein,
-        'carbs': carbs,
-        'fats': fats,
-        'option': option,
-        'check' : checkIcon
 
-      })
-    }).then(function (response) {
-      window.location.reload()
-    })
-  });
-});
 
 //This is where estimated calories begin 
 
@@ -150,6 +155,7 @@ function displayMacros () {
   .then(function (response) {
     window.location.reload()
   })
+  
 
 }
 
@@ -169,6 +175,42 @@ function createMeal () {
   totalFats += parseInt(fatsApi)
  }
 
+ Array.from(deleteMacro).forEach(function(element) {
+     
+  element.addEventListener('click', function(){
+    
+    
+    const name = document.querySelector('.apiInfo').value
+    let apiCalories = this.parentNode.parentNode.childNodes[5].childNodes[3].childNodes[3].innerText;
+    const proteinApi = this.parentNode.parentNode.childNodes[5].childNodes[3].childNodes[7].innerText;
+    const carbsApi = this.parentNode.parentNode.childNodes[5].childNodes[3].childNodes[11].innerText;
+    const fatsApi = this.parentNode.parentNode.childNodes[5].childNodes[3].childNodes[15].innerText;
+    
+    fetch('apiForm', {
+      method: 'delete',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: name,
+        calories: apiCalories,
+        protein: proteinApi,
+        carbs: carbsApi,
+        fats: fatsApi,
+        
+      })
+      
+    }).then(function (response) {
+      window.location.reload()
+    })
+  });
+});
+
+ 
+ 
+ 
+ 
+ 
  //Workout function begins
  
  let exercises = document.querySelectorAll('button')
@@ -227,3 +269,6 @@ function createMeal () {
      
  }
 
+document.querySelector('.getInfo').addEventListener('click', getInfo);
+document.querySelector('.displayAPI').addEventListener('click', displayMacros);
+document.querySelector('.createMeal').addEventListener('click', createMeal);

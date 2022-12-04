@@ -88,12 +88,19 @@
           <ul class="macroList">
             <section class="macroBoxes">
               <% for (let i = 0; i < test.length; i++) { %>
-                <li><span><%= test[i].name %></span></li>
-                <li><span><%= test[i].calories %> Calories(grams)</span></li>
-                <li><span><%= test[i].protein %> Protein (grams)</span></li>
-                <li><span><%= test[i].carbs %> Carbs (grams)</span></li>
-                <li><span><%= test[i].fats %> Fats (grams)</span></li>
+                <div class="seperateMacros">
+                  <li><span><%= test[i].name %></span></li>
+                  <li><span><%= test[i].calories %> Calories(grams)</span></li>
+                  <li><span><%= test[i].protein %> Protein (grams)</span></li>
+                  <li><span><%= test[i].carbs %> Carbs (grams)</span></li>
+                  <li><span><%= test[i].fats %> Fats (grams)</span></li>
+
+              <span><i class="fa fa-trash-o deleteButton" aria-hidden="true"></i></span>
+              <span><i data-checkbox="true" class="fa-solid fa-heart checkgreen strike saveButton" aria-hidden="true"></i></span>
+                </div>
+               
               <% } %>
+
             </section>
           </ul>
           

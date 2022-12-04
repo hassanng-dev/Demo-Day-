@@ -629,16 +629,24 @@ ol li {
         margin-bottom: 4%;
     }
 
-    .macroBoxes {
+    /* .macroBoxes {
         border: 2px solid black;
         border-radius: 10px;
         margin-top: 2%;
         box-shadow: 5px 5px 5px black;
         margin-bottom: 6%;
-    }
+    } */
 
     .macroList {
         width: 40%;
+    }
+
+    .seperateMacros {
+        border: 2px solid black;
+        border-radius: 10px;
+        margin-top: 2%;
+        box-shadow: 5px 5px 5px black;
+        margin-bottom: 6%;
     }
 
 

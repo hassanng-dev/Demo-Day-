@@ -120,6 +120,17 @@ app.delete('/info', (req, res) => {
     res.send('Message deleted!')
   })
 })
+
+
+//Delete macros from meal plans 
+
+app.delete('/info', (req, res) => {
+  db.collection('apimacros').findOneAndDelete({day: req.body.day, meal: req.body.meal, name: req.body.name}, (err, result) => {
+    if (err) return res.send(500, err)
+    res.send('Message deleted!')
+  })
+})
+
 // =============================================================================
 // AUTHENTICATE (FIRST LOGIN) ==================================================
 // =============================================================================
