@@ -535,6 +535,8 @@ ol li {
     display: flex;
     flex-direction: row;
     width: 100%;
+    /* background-image: url(img/workoutbg.jpeg); */
+    background-size: 100%;
     /* display: flex;
     flex-direction: column; */
     
@@ -562,7 +564,7 @@ ol li {
   }
 
   .getInfo {
-    border: 2px solid transparent;
+    border: 2px solid black;
     width: 20%;
     margin-left: auto;
     margin-right: auto;
@@ -601,9 +603,9 @@ ol li {
     }
 
     .macrosSection {
-        border: 2px solid black;
+        border: 2px solid transparent;
         display: flex;
-        width: 50%;
+        width: 60%;
         flex-direction: column;
     }
     
@@ -647,6 +649,12 @@ ol li {
         margin-top: 2%;
         box-shadow: 5px 5px 5px black;
         margin-bottom: 6%;
+        width: 100%;
+    }
+
+    .fa-ban {
+        color:black;
+        margin-left: 30%;
     }
 
 
@@ -958,6 +966,12 @@ ol li {
 .backText {
     text-align: center;
 }
+
+/* .workoutSections {
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+} */
 /* =================================== */
 /* ========/* WORKOUT PAGE ========== */
 /* =================================== */

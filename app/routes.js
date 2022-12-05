@@ -42,6 +42,8 @@ module.exports = function(app, passport, db) {
           info: result
         })
       })
+
+      
   });
 
   // LOGOUT ==============================
@@ -115,6 +117,7 @@ app.put('/check', (req, res) => {
 
 
 app.delete('/info', (req, res) => {
+  
   db.collection('messages').findOneAndDelete({day: req.body.day, meal: req.body.meal, name: req.body.name}, (err, result) => {
     if (err) return res.send(500, err)
     res.send('Message deleted!')
@@ -124,8 +127,9 @@ app.delete('/info', (req, res) => {
 
 //Delete macros from meal plans 
 
-app.delete('/info', (req, res) => {
-  db.collection('apimacros').findOneAndDelete({day: req.body.day, meal: req.body.meal, name: req.body.name}, (err, result) => {
+app.delete('/mealplan', (req, res) => {
+  console.log('deleted macro')
+  db.collection('apimacros').findOneAndDelete({user: req.user.local.email, name: req.body.name, calories: req.body.calories, protein: req.body.protein, carbs: req.body.carbs, fats: req.body.fats}, (err, result) => {
     if (err) return res.send(500, err)
     res.send('Message deleted!')
   })

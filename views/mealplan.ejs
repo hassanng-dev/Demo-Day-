@@ -39,9 +39,7 @@
       <div class="intro"><h1>Diet Plans</h1></div>
       <div class="text2">
         <p>Learn about different approaches to fitness nutrition so you can choose the best diet plan to suit your goals.</p>
-        <!-- <div><a href="#"><button type="button" class="btn btn-primary btn-lg">Learn More</button></a></div> -->
       </div>
-      
     </section>
 
 
@@ -54,60 +52,57 @@
           <input class="apiInfo" placeholder="Search For Macros" type="text" name="nutrients">
           
           <ul>
-            
             <div class="apiInput">
-              <span>Calories (grams)</span>
+              <span>Calories gram(s)</span>
             </div>
+            
             <li><h3 name="caloriesApi" class ="apiCalories"></h3></li>
             
             <div class="apiInput">
-              <span>Protein (grams)</span>
+              <span>Protein gram(s)</span>
             </div>
+            
             <li><h3 name="proteinApi" class="apiProtein"></h3></li>
             
             <div class="apiInput">
-              <span>Carbs (grams)</span>
+              <span>Carbs gram(s)</span>
             </div>
+            
             <li><h3 name="carbsApi" class="apiCarbs"></h3></li>
             
             <div class="apiInput">
-              <span>Fats (grams)</span>
+              <span>Fats gram(s)</span>
             </div>
-            <li><h3 name="fatsApi" class="apiFats"></h3></li>
             
+            <li><h3 name="fatsApi" class="apiFats"></h3></li>
           </ul>
+          
           <button type="button" class="createMeal">Add A Item</button>
           <button class="displayAPI">Save Macros</button>
         </form>
          
       </section>
        
-       <section class="macrosSection">
+      <section class="macrosSection">
         <section class="macros">
           <h2>Estimated Macros</h2>
           <ul class="macroList">
             <section class="macroBoxes">
               <% for (let i = 0; i < test.length; i++) { %>
                 <div class="seperateMacros">
-                  <li><span><%= test[i].name %></span></li>
-                  <li><span><%= test[i].calories %> Calories(grams)</span></li>
-                  <li><span><%= test[i].protein %> Protein (grams)</span></li>
-                  <li><span><%= test[i].carbs %> Carbs (grams)</span></li>
-                  <li><span><%= test[i].fats %> Fats (grams)</span></li>
-
-              <span><i class="fa fa-trash-o deleteButton" aria-hidden="true"></i></span>
-              <span><i data-checkbox="true" class="fa-solid fa-heart checkgreen strike saveButton" aria-hidden="true"></i></span>
+                  <li><span class="macroName"><%= test[i].name %></span></li>
+                  <li><span class="macroCalories"><%= test[i].calories %> Calories gram(s)</span></li>
+                  <li><span class="macroProtein"><%= test[i].protein %> Protein gram(s)</span></li>
+                  <li><span class="macroGrams"><%= test[i].carbs %> Carbs gram(s)</span></li>
+                  <li><span class="macroFats"><%= test[i].fats %> Fats gram(s)</span></li>
+                  <span><i class="fa-solid fa-ban deleteButton"></i></span>
+                  <!-- <span><i data-checkbox="true" class="fa-solid fa-heart checkgreen strike saveButton" aria-hidden="true"></i></span> -->
                 </div>
-               
               <% } %>
-
             </section>
           </ul>
-          
-        
         </section>
-        
-         </section>
+      </section>
     </section> 
   </main>
 

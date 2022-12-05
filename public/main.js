@@ -3,7 +3,7 @@ var trash = document.getElementsByClassName("fa-trash-o");
 var deleteMacro = document.getElementsByClassName("deleteButton");
 var saveMacro = document.getElementsByClassName("saveButton");
 var check = document.getElementsByClassName("fa-heart");
-console.log("main.js page",check)
+
 
 let totalCalories = 0
 let mealName = " "
@@ -16,9 +16,9 @@ let counter = 0
 
 
 Array.from(check).forEach(function(element) {
-  console.log(element)
+  
   element.addEventListener('click', function(){
-    console.log("clicked")
+    
     const day = this.parentNode.parentNode.childNodes[1].innerText
     const meal = this.parentNode.parentNode.childNodes[3].innerText
     const name = this.parentNode.parentNode.childNodes[5].innerText
@@ -56,7 +56,7 @@ Array.from(trash).forEach(function(element) {
      
       element.addEventListener('click', function(){
         
-        console.log("clicked")
+        
         const day = this.parentNode.parentNode.childNodes[1].innerText
         const meal = this.parentNode.parentNode.childNodes[3].innerText
         const name = this.parentNode.parentNode.childNodes[5].innerText
@@ -178,22 +178,27 @@ function createMeal () {
  Array.from(deleteMacro).forEach(function(element) {
      
   element.addEventListener('click', function(){
-    
+  
+    console.log('hello')
     
     const name = document.querySelector('.apiInfo').value
-    let apiCalories = this.parentNode.parentNode.childNodes[5].childNodes[3].childNodes[3].innerText;
-    const proteinApi = this.parentNode.parentNode.childNodes[5].childNodes[3].childNodes[7].innerText;
-    const carbsApi = this.parentNode.parentNode.childNodes[5].childNodes[3].childNodes[11].innerText;
-    const fatsApi = this.parentNode.parentNode.childNodes[5].childNodes[3].childNodes[15].innerText;
+    const cal = document.querySelector('.macroCalories').innerHTML
+    const proteinApi = document.querySelector('.macroProtein').innerHTML
+    const carbsApi = document.querySelector('.macroGrams').innerHTML
+    const fatsApi = document.querySelector('.macroFats').innerHTML
+    // const cal = this.parentNode.parentNode.childNodes[5].childNodes[3].childNodes[3].innerText;
+    // const proteinApi = this.parentNode.parentNode.childNodes[5].childNodes[3].childNodes[7].innerText;
+    // const carbsApi = this.parentNode.parentNode.childNodes[5].childNodes[3].childNodes[11].innerText;
+    // const fatsApi = this.parentNode.parentNode.childNodes[5].childNodes[3].childNodes[15].innerText;
     
-    fetch('apiForm', {
+    fetch('apimacros', {
       method: 'delete',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         name: name,
-        calories: apiCalories,
+        calories: cal,
         protein: proteinApi,
         carbs: carbsApi,
         fats: fatsApi,
