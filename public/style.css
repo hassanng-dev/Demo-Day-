@@ -324,12 +324,13 @@ nav {
     height: 50%;
     width: 70%;
     font-size: 18px;
-    margin-left: 18%;
+    margin-left: 8%;
 }
+
 
 .dietButton {
     margin-top: 1%;
-    margin-left: 40%;
+    margin-left: 32%;
 }
 /* ==================================== */
 /*====== BOTTOMMMM SECITON TEMPLATE==== */
@@ -354,10 +355,10 @@ footer {
    border: 2px solid transparent;
    font-size: 18px;
    color: white;
-   width: 20%;
+   width: 22%;
    display: flex;
    flex-direction: row;
-   padding-top: .5%;
+   padding-top: 1%;
    
 }
 
@@ -379,8 +380,6 @@ footer {
     flex-direction: row;
     width: 100%;
     height: 60px;
-    /* padding-top: .5%; */
-    
 }
 
 
@@ -389,7 +388,6 @@ footer {
     border: 2px solid transparent;
     width: 100%;
     padding-top: .5%;
-   
 }
 
 
@@ -400,7 +398,7 @@ footer {
     font-size: 20px;
     margin-left: 11%;
     font-size: 20px;
-  }
+}
 
 .footerLinks a {
     border: 2px solid transparent;
@@ -550,19 +548,6 @@ ol li {
     text-transform:capitalize;
 }
 
-/* .chestButton, .glutesButton, .bicepsButton {
-    padding-left: 12%;
-    padding-top: 1%;
-}
-
-.lowerBackButton {
-    padding-top: 1%;
-}
-
-.trapsButton {
-    padding-left: 13%;
-    padding-top: 1%;
-} */
 
 /* ====================== */
 /* WORKOUT TEMPLATE PAGE */
@@ -579,14 +564,10 @@ ol li {
     display: flex;
     flex-direction: row;
     width: 100%;
-    /* background-image: url(img/workoutbg.jpeg); */
     background-size: 100%;
-    /* display: flex; */
-    
-    
-  }
+}
 
-  .apiInfoBox {
+.apiInfoBox {
     border: 2px solid black;
     box-shadow: 5px 5px 5px black;
     border-radius: 10px;
@@ -597,46 +578,46 @@ ol li {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1%;
-  }
+}
 
-  .apiInfoBox ul {
-    list-style: none;
-  }
+.apiInfoBox ul {
+  list-style: none;
+}
 
-  .apiInfoBox h3 {
+.apiInfoBox h3 {
     text-align: center;
-  }
+}
 
-  .getInfo {
+.getInfo {
     border: 2px solid black;
     width: 20%;
     margin-left: 24%;
     margin-right: auto;
     width: 50%;
-    }
+}
 
-  .apiInfo {
+.apiInfo {
     border: 2px solid black;
     margin-top: 3%;
     margin-left: 15%;
     margin-right: auto;
     width: 70%;
     text-align: center;
-   }
+}
 
-   .warningMsg {
+.warningMsg {
     color:red;
     margin-left: 4%;
-   }
+}
 
-   .apiInput {
+.apiInput {
     border: 2px solid transparent;
     font-size: 19px;
     width: 100%;
     color: rgb(3,85,153,1);
     margin-left: 21%;
     margin-right: auto;
-   }
+}
 
    .displayAPI {
     border: 2px solid black;
@@ -998,64 +979,6 @@ header h1 {
     background-size: 100%;
   }
 
-  /* .nutrionAPI {
-    border: 2px solid red;
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    
-  }
-
-  .apiInfoBox {
-    border: 2px solid black;
-    box-shadow: 5px 5px 5px black;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 11%;
-  }
-
-  .apiInfoBox ul {
-    list-style: none;
-  }
-
-  .apiInfoBox h3 {
-    text-align: center;
-  }
-
-  .getInfo {
-    border: 2px solid black;
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 7%;
-    width: 30%;
-    }
-
-  .apiInfo {
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    text-align: center;
-   }
-
-   .apiInput {
-    border: 2px solid transparent;
-    font-size: 19px;
-    width: 100%;
-    margin-top: 7%;
-    color: rgb(3,85,153,1);
-    margin-left: 21%;
-    margin-right: auto;
-     
-  }*/
-
   .dailyMealForm {
     border: 2px solid transparent;
     width: 50%;
@@ -1097,7 +1020,6 @@ header h1 {
   #mealTxt {
     /* border: 2px solid black; */
     margin-left: 22%;
-    /* width: 54%; */
     text-align: center;
     margin-top: 3%;
   }
@@ -1245,10 +1167,10 @@ header h1 {
     }
 
     .dietTextOne h2 {
-        margin-left: 23%;
+        margin-left: 3%;
         margin-right: auto;
-        width: 50%;
-        margin-top: 11%;
+        width: 99%;
+        margin-top: 19%;
     }
 
     .dietTextTwo p {
@@ -1268,9 +1190,8 @@ header h1 {
     
     
     .dietTextOne h2 {
-        margin-left: 23%;
+        margin-left: 24%;
         margin-right: auto;
-        width: 50%;
         margin-top: 11%;
         width: 70%;
     }   
@@ -1279,6 +1200,9 @@ header h1 {
         margin-left: 18%;
         margin-right: auto;
         width: 70%;
+    }
+    .copyRight {
+        width: 23%;
     }
 }
 
@@ -1320,14 +1244,32 @@ header h1 {
         margin-right: auto;
     }
 
+    .workoutButton {
+        margin-left: 30%;
+    }
+
+    .copyRight {
+        width: 25%;
+    }
+
 }
 
 @media (max-width: 1099px) and (min-width: 858px) {
     .intro {
         margin-left: auto;
         margin-right: auto;
-        width: 90%;
+        width: 104%;
+        margin-top: 13%;
     }
+
+    .intro h1 {
+        font-size: 78px;
+        width: 98%;
+    }
+
+    /* .introText {
+        margin-top: 1%;
+    } */
 
     .topSection button {
         margin-top: 20%;
@@ -1366,7 +1308,7 @@ header h1 {
     .dietTextTwo p {
         margin-left: 25%;
         margin-right: auto;
-        width: 70%;
+        width: 75%;
     }
 
     .dietTextTwo button {
@@ -1376,6 +1318,10 @@ header h1 {
     .dietLeft img {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .copyRight {
+        width: 28%;
     }
 
 }
