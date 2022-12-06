@@ -60,7 +60,7 @@ module.exports = function(app, passport, db) {
 
 //post for calorie tracker
 app.post('/info', (req, res) => {
-  console.log(req.body)
+  
   db.collection('messages').save({user: req.user.local.email, day: req.body.day, meal: req.body.meal, name: req.body.name.trim(), calories: req.body.calories, protein: req.body.protein, carbs: req.body.carbs, fats: req.body.fats, option: req.body.option, check: false}, (err, result) => {
     if (err) return console.log(err)
     console.log('saved to database')
@@ -71,11 +71,11 @@ app.post('/info', (req, res) => {
 
   // post for API MACROS
 app.post('/apiInfo', (req, res) => {
-  console.log(req.body)
-  db.collection('apimacros').save({user: req.user.local.email, name: req.body.name.trim(), calories: req.body.calories, protein: req.body.protein, carbs: req.body.carbs, fats: req.body.fats}, (err, result) => {
+  
+  db.collection('apimacros').save({user: req.user.local.email, name: req.body.name.trim(), calories: req.body.calories.toString(), protein: req.body.protein, carbs: req.body.carbs, fats: req.body.fats}, (err, result) => {
       if (err) return console.log(err)
       console.log('saved to database')
-      res.redirect('/mealplan')
+      // res.redirect('/mealplan')
     })
   })
 
@@ -91,7 +91,7 @@ app.post('/apiInfo', (req, res) => {
 
   app.get('/mealplan', isLoggedIn, function(req, res) {
     db.collection('apimacros').find({user: req.user.local.email}).toArray((err, result) => {
-       console.log(`we're looking at this ${result}`)
+       
       res.render('mealplan.ejs', {
         user : req.user,
         test: result
@@ -128,8 +128,8 @@ app.delete('/info', (req, res) => {
 //Delete macros from meal plans 
 
 app.delete('/mealplan', (req, res) => {
-  console.log('deleted macro')
-  db.collection('apimacros').findOneAndDelete({user: req.user.local.email, name: req.body.name, calories: req.body.calories, protein: req.body.protein, carbs: req.body.carbs, fats: req.body.fats}, (err, result) => {
+  console.log(req.user.local.email, req.body.name, req.body.calories)
+  db.collection('apimacros').findOneAndDelete({user: req.user.local.email, name: req.body.name, calories: req.body.calories}, (err, result) => {
     if (err) return res.send(500, err)
     res.send('Message deleted!')
   })

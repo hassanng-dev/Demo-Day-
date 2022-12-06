@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/6402ca9563.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>Meal Plan</title>
+  <title>Engee Wellness</title>
 </head>
 <body>
   
@@ -15,6 +15,7 @@
     <nav>
       <section class="logo">
         <a href="/index"><img src="img/logo.jpg" class="logoPic" alt="Engee fitness logo"></a>
+        
       </section>
     
       <section class="links">
@@ -38,7 +39,7 @@
     <section class="topSection">
       <div class="intro"><h1>Diet Plans</h1></div>
       <div class="text2">
-        <p>Learn about different approaches to fitness nutrition so you can choose the best diet plan to suit your goals.</p>
+        <p>Learn about fitness nutrition and choose the best diet plan to suit your goals.</p>
       </div>
     </section>
 
@@ -46,7 +47,7 @@
     <section class="nutrionAPI">
       <section class="apiInfoBox">
         <h3>Nutrional Facts</h3>
-        <button class="getInfo">Click Me!</button>
+        <button class="getInfo myButton">Search Macros</button>
           
         <form class="apiForm">
           <input class="apiInfo" placeholder="Search For Macros" type="text" name="nutrients">
@@ -77,8 +78,8 @@
             <li><h3 name="fatsApi" class="apiFats"></h3></li>
           </ul>
           
-          <button type="button" class="createMeal">Add A Item</button>
-          <button class="displayAPI">Save Macros</button>
+          <button type="button" class="createMeal myButton">Make A Meal</button>
+          <button class="displayAPI myButton">Save Macros</button>
         </form>
          
       </section>
@@ -91,18 +92,23 @@
               <% for (let i = 0; i < test.length; i++) { %>
                 <div class="seperateMacros">
                   <li><span class="macroName"><%= test[i].name %></span></li>
-                  <li><span class="macroCalories"><%= test[i].calories %> Calories gram(s)</span></li>
-                  <li><span class="macroProtein"><%= test[i].protein %> Protein gram(s)</span></li>
-                  <li><span class="macroGrams"><%= test[i].carbs %> Carbs gram(s)</span></li>
-                  <li><span class="macroFats"><%= test[i].fats %> Fats gram(s)</span></li>
+                  <li><span class="macroCalories"><%= test[i].calories %> Calories </span></li>
+                  <li><span class="macroProtein"><%= test[i].protein %> Protein </span></li>
+                  <li><span class="macroGrams"><%= test[i].carbs %> Carbs </span></li>
+                  <li><span class="macroFats"><%= test[i].fats %> Fats </span></li>
                   <span><i class="fa-solid fa-ban deleteButton"></i></span>
+                  
                   <!-- <span><i data-checkbox="true" class="fa-solid fa-heart checkgreen strike saveButton" aria-hidden="true"></i></span> -->
                 </div>
               <% } %>
             </section>
           </ul>
         </section>
-      </section>
+      </section> 
+
+
+      
+
     </section> 
   </main>
 
