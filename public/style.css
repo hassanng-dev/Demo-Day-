@@ -1254,7 +1254,7 @@ header h1 {
 
 }
 
-@media (max-width: 1099px) and (min-width: 858px) {
+@media (max-width: 1099px) and (min-width: 859px) {
     .intro {
         margin-left: auto;
         margin-right: auto;
@@ -1263,13 +1263,9 @@ header h1 {
     }
 
     .intro h1 {
-        font-size: 78px;
-        width: 98%;
+        font-size: 65px;
+        width: 100%;
     }
-
-    /* .introText {
-        margin-top: 1%;
-    } */
 
     .topSection button {
         margin-top: 20%;
@@ -1281,13 +1277,13 @@ header h1 {
     }
 
     .text1 h2 {
-        margin-left: 12%;
+        margin-left: 3%;
         margin-right: auto;
         width: 100%;
     }
 
     .text2 p {
-        margin-left: auto;
+        margin-left: 17%;
         margin-right: auto; 
         width: 73%;
      }
@@ -1305,8 +1301,17 @@ header h1 {
         width: 70%;
     } 
 
+    .dietTextTwo {
+        margin-bottom: 7%;
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 100%;
+    }
+
     .dietTextTwo p {
-        margin-left: 25%;
+        margin-left: 15%;
         margin-right: auto;
         width: 75%;
     }
@@ -1321,16 +1326,144 @@ header h1 {
     }
 
     .copyRight {
-        width: 28%;
+        width: 32%;
     }
 
+    .footerLinks ul {
+        margin-left: 0%;
+        border: 2px solid transparent;
+        width: 100%;
+        padding-top: .5%;
+    }
+
+    .links ul {
+        border: 2px solid transparent;
+        width: 100%;
+        margin-left: 6%;
+    }
+
+    .links li {
+        border: 2px solid transparent;
+        list-style: none;
+        display: inline-block;
+        font-size: 20px;
+        margin-left: 11%;
+    }
+
+    .sectionRight img {
+        margin-left: 2%;
+        height: 300px;
+        width: 430px;
+    }
+
+    .dietLeft img {
+        height: 300px;
+        width: 430px;
+        margin-left: 3%;
+        margin-top: 5%;
+    }
+    .text2 {
+        border: 2px solid transparent;
+        height: 60%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .text1 {
+        border: 2px solid transparent;
+        width: 90%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dietTextOne h2 {
+        margin-left: 15%;
+        margin-right: auto;
+        margin-top: 11%;
+        width: 80%;
+    }
 }
 
-@media (max-width: 858px) and (min-width: 800px) {
+@media (max-width: 859px) and (min-width: 815px) {
+    .logo {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: row;
+        float: left;
+        width: 12%;
+        height: 65px;
+    }
+    
     .intro {
         margin-left: auto;
         margin-right: auto;
-        /* width: 90%; */
+        width: 100%;
+        margin-top: 16%;
+    }
+
+    .intro h1 {
+        font-size: 64px;
+        width: 100%;
+    }
+
+    .introText {
+        margin-left: 28%;
+    }
+
+    .links li {
+        border: 2px solid transparent;
+        list-style: none;
+        display: inline-block;
+        font-size: 20px;
+        margin-left: 11%;
+    }
+
+    .accountlinks ul {
+        margin-left: 22%;
+    }
+
+    .text1 {
+        border: 2px solid transparent;
+        width: 90%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text1 h2 {
+        font-size: 39px;
+        margin-top: 14%;
+        margin-left: 6%;
+    }
+
+    .text2 p {
+        margin-left: 5%;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .dietTextOne h2 {
+        margin-left: 8%;
+        margin-right: auto;
+        margin-top: 11%;
+        width: 93%;
+        text-align: center;
+    }
+
+    .dietTextTwo p {
+        margin-left: 12%;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .dietTextTwo button {
+        margin-top: 3%;
+        margin-left: 38%;
     }
 
     .topSection button {
@@ -1340,12 +1473,6 @@ header h1 {
     .link {
         margin-left: auto;
         margin-right: auto;
-    }
-
-    .text1 h2 {
-        margin-left: 12%;
-        margin-right: auto;
-        width: 100%;
     }
 
     .text2 p {
@@ -1359,18 +1486,19 @@ header h1 {
         margin-top: 1%;
     }
 
-    .dietTextOne h2 {
-        margin-left: 28%;
-        margin-right: auto;
-        width: 50%;
-        margin-top: 11%;
-        width: 70%;
-    } 
+    .sectionRight img {
+        margin-left: -7%;
+        height: 300px;
+        width: 430px;
+    }
 
-    .dietTextTwo p {
-        margin-left: 25%;
-        margin-right: auto;
-        width: 70%;
+    .dietTextTwo {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 100%;
+        margin-bottom: 11%;
     }
 
     .dietTextTwo button {
@@ -1382,9 +1510,561 @@ header h1 {
         margin-right: auto;
     }
 
+    .dietLeft img {
+        height: 300px;
+        width: 430px;
+        margin-left: 3%;
+        margin-top: 5%;
+    }
+
+    .footerLinks ul {
+        margin-left: 1%;
+        border: 2px solid transparent;
+        width: 100%;
+        padding-top: .5%;
+    }
+
+    .copyRight {
+        width: 32%;
+    }
+
 }
 
+@media (max-width: 815px) and (min-width: 800px) {
 
+    .logo {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: row;
+        float: left;
+        width: 12%;
+        height: 65px;
+    }
+    
+    .intro {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-top: 16%;
+    }
 
+    .intro h1 {
+        font-size: 60px;
+        width: 100%;
+    }
+
+    .introText {
+        margin-left: 28%;
+    }
+
+    .links li {
+        border: 2px solid transparent;
+        list-style: none;
+        display: inline-block;
+        font-size: 20px;
+        margin-left: 9%;
+    }
+
+    .accountlinks {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: row;
+        width: 23%;
+        height: 64px;
+        padding-top: 1%;
+    }
+
+    .text1 {
+        border: 2px solid transparent;
+        width: 90%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text1 h2 {
+        font-size: 39px;
+        margin-top: 14%;
+        margin-left: 6%;
+    }
+
+    .text2 p {
+        margin-left: 5%;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .dietTextOne h2 {
+        margin-left: 8%;
+        margin-right: auto;
+        margin-top: 11%;
+        width: 93%;
+        text-align: center;
+    }
+
+    .dietTextTwo p {
+        margin-left: 15%;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .dietTextTwo button {
+        margin-top: 3%;
+        margin-left: 38%;
+    }
+
+    .topSection button {
+        margin-top: 20%;
+    }
+
+    .link {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text2 p {
+        margin-left: auto;
+        margin-right: auto; 
+        width: 73%;
+     }
+     
+     .text2 button {
+        margin-left:29%;
+        margin-top: 1%;
+    }
+
+    .sectionRight img {
+        margin-left: -7%;
+        height: 300px;
+        width: 430px;
+    }
+
+    .dietTextTwo {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 100%;
+        margin-bottom: 11%;
+    }
+
+    .dietTextTwo button {
+        margin-top: 4%;
+    }
+
+    .dietLeft img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .dietLeft img {
+        height: 300px;
+        width: 430px;
+        margin-left: 3%;
+        margin-top: 5%;
+    }
+
+    .footerLinks ul {
+        margin-left: 1%;
+        border: 2px solid transparent;
+        width: 100%;
+        padding-top: .5%;
+    }
+
+    .footerLinks li {
+        border: 2px solid transparent;
+        list-style: none;
+        display: inline-block;
+        font-size: 20px;
+        margin-left: 4%;
+        font-size: 20px;
+    }
+
+    .copyRight {
+        width: 35%;
+    }
+}
+
+@media (max-width: 800px) and (min-width: 768px) {
+    .intro {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-top: 16%;
+    }
+
+    .intro h1 {
+        font-size: 60px;
+        width: 100%;
+    }
+
+    .introText {
+        margin-left: 28%;
+    }
+
+    .topSection h2 {
+        font-size: 50px;
+        color: white;
+    }
+
+    .links ul {
+        border: 2px solid transparent;
+        width: 100%;
+        margin-left: 9%;
+    }
+
+    .links li {
+        border: 2px solid transparent;
+        list-style: none;
+        display: inline-block;
+        font-size: 20px;
+        margin-left: 9%;
+    }
+
+    .accountlinks {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: row;
+        width: 17%;
+        height: 64px;
+        padding-top: 1%;
+    }
+
+    .accountlinks ul {
+        margin-left: 0%;
+    }
+
+    .workout {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sectionLeft {
+        border: 2px solid transparent;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text1 h2 {
+        font-size: 39px;
+        margin-top: 0%;
+        margin-left: 27%;
+    }
+
+    .text2 p {
+        width: 100%;
+        margin-left: 2%;
+        font-size: 18px;
+        margin-top: -10%;
+    }
+
+    .workoutButton {
+        margin-left: 37%;
+    }
+
+    .sectionRight {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: 350px;
+        width: 100%;
+        margin-top: -22%;
+    }
+
+    .sectionRight img {
+        margin-left: 16%;
+        width: 500px;
+        margin-right: auto;
+        margin-top: 1%;
+    }
+
+    .dietPlan {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dietLeft img {
+        height: 344px;
+        width: 490px;
+        margin-left: 32%;
+        /* margin-top: 5%; */
+        margin-top: 75%;
+    }
+
+    .dietTextOne {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 100%;
+        position: relative;
+        bottom: 103%;
+        left: 56%;
+    }
+
+    .dietTextOne h2 {
+        font-size: 39px;
+        margin-top: 9%;
+        width: 160%;
+        position: relative;
+        right: 36%;
+    }
+
+    .dietTextTwo {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 100%;
+        position: relative;
+        bottom: 124%;
+        left: 51%;
+    }
+
+    .dietTextTwo p {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 161%;
+        font-size: 18px;
+        margin-left: -29%;
+    }
+
+    .dietButton {
+        padding: 0.5rem 1rem;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        border-radius: 0.3rem;
+        margin-top: -11%;
+        margin-left: 32%;
+    }
+    
+    .footerLinks li {
+        border: 2px solid transparent;
+        list-style: none;
+        display: inline-block;
+        font-size: 20px;
+        margin-left: 5%;
+        font-size: 20px;
+    }
+
+    .copyRight {
+        border: 2px solid transparent;
+        font-size: 18px;
+        color: white;
+        width: 39%;
+        display: flex;
+        flex-direction: row;
+        padding-top: 1%;
+    }
+
+    .copyRight span {
+        margin-left: 8%;
+    }
+
+}
+
+@media (max-width: 768px) and (min-width: 650px) {
+    .topSection {
+        border: 2px solid black;
+        background-image: url(img/gymbackground.jpg);
+        background-size: 100%;
+        height: 457px;
+    }
+
+    .intro {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-top: 16%;
+    }
+
+    .intro h1 {
+        font-size: 52px;
+        width: 100%;
+    }
+
+    .introText {
+        margin-left: 28%;
+    }
+
+    .topSection h2 {
+        font-size: 41px;
+        color: white;
+    }
+
+    .text2 p {
+        width: 80%;
+        margin-left: 8%;
+        font-size: 18px;
+        margin-top: -10%;
+        text-align: center;
+    }
+
+    .links ul {
+        border: 2px solid transparent;
+        width: 100%;
+        margin-left: 3%;
+    }
+
+    .links li {
+        border: 2px solid transparent;
+        list-style: none;
+        display: inline-block;
+        font-size: 20px;
+        margin-left: 9%;
+    }
+
+    .accountlinks {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: row;
+        width: 19%;
+        height: 64px;
+        padding-top: 1%;
+    }
+
+    .accountlinks ul {
+        margin-left: 0%;
+    }
+
+    .workout {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sectionLeft {
+        border: 2px solid transparent;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text1 h2 {
+        font-size: 39px;
+        margin-top: 0%;
+        margin-left: 27%;
+    }
+
+    .text2 p {
+        width: 100%;
+        margin-left: 2%;
+        font-size: 18px;
+        margin-top: -10%;
+    }
+
+    .workoutButton {
+        margin-left: 37%;
+    }
+
+    .sectionRight {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: 350px;
+        width: 100%;
+        margin-top: -22%;
+    }
+
+    .sectionRight img {
+        margin-left: 16%;
+        width: 500px;
+        margin-right: auto;
+        margin-top: 5%;
+    }
+
+    .dietPlan {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dietLeft img {
+        height: 344px;
+        width: 490px;
+        margin-left: 32%;
+        /* margin-top: 5%; */
+        margin-top: 75%;
+    }
+
+    .dietTextOne {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 100%;
+        position: relative;
+        bottom: 103%;
+        left: 56%;
+    }
+
+    .dietTextOne h2 {
+        font-size: 39px;
+        margin-top: 9%;
+        width: 180%;
+        position: relative;
+        right: 36%;
+    }
+
+    .dietTextTwo {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 100%;
+        position: relative;
+        bottom: 124%;
+        left: 51%;
+    }
+
+    .dietTextTwo p {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 161%;
+        font-size: 18px;
+        margin-left: -29%;
+    }
+
+    .dietButton {
+        padding: 0.5rem 1rem;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        border-radius: 0.3rem;
+        margin-top: -11%;
+        margin-left: 32%;
+    }
+    
+    .footerLinks li {
+        border: 2px solid transparent;
+        list-style: none;
+        display: inline-block;
+        font-size: 20px;
+        margin-left: 5%;
+        font-size: 20px;
+    }
+
+    .copyRight {
+        border: 2px solid transparent;
+        font-size: 18px;
+        color: white;
+        width: 39%;
+        display: flex;
+        flex-direction: row;
+        padding-top: 1%;
+    }
+
+    .copyRight span {
+        margin-left: 8%;
+    }
+
+}
 
 /* MEDIAAAAAA QUIERIES */
