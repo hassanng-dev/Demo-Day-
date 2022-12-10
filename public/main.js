@@ -137,7 +137,7 @@ function displayMacros () {
      carbsApi = totalCarbs;
      fatsApi = totalFats;
   }
-  
+  //sending data to DB
   fetch('apiInfo', {
     method:"post",
     headers: {
@@ -158,7 +158,7 @@ function displayMacros () {
   
 
 }
-
+//Function for making a meal 
 function createMeal () {
   
   const name = document.querySelector('.apiInfo').value
@@ -207,11 +207,7 @@ function createMeal () {
 });
 
  
- 
- 
- 
- 
- //Workout function begins
+//Workout function begins
  
  let exercises = document.querySelectorAll('button')
  exercises.forEach(exercises => exercises.addEventListener('click', getWorkout))
