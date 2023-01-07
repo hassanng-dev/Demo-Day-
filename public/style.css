@@ -3660,8 +3660,8 @@ header h1 {
 
     
 }
-
-@media (max-width: 799px) and (min-width: 700px) {
+/* TABLET VIEW min 768px */
+@media (max-width: 799px) and (min-width: 768px) {
     
     .topRow {
         border: 2px solid transparent;
@@ -3761,5 +3761,335 @@ header h1 {
         height: auto;
         width: 100%;
     }
+}
+
+@media (max-width: 768px) and (min-width: 700px) {
+    
+    .topRow {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: row;
+        column-gap: 56px;
+        margin-left: 0%;
+    }
+
+    .btnRow {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: row;
+        column-gap: 56px;
+        margin-left: 0%;
+        margin-top: 2%;
+    }
+
+    .workoutIntro {
+        border: 2px solid transparent;
+        height: 107px;
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        margin-top: 21%;
+        color: white;
+    }
+
+    .workoutIntro h1 {
+        font-size: 54px;
+    }
+
+    .topSection p {
+        font-size: 30px;
+        color: white;
+        width: 80%;
+        text-align: center;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+    .btn-primary {
+        margin-top: 5%;
+        margin-left: 11%;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .imgBox {
+        border: 2px solid transparent;
+        height: 185px;
+        width: 222px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rowBack {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-top: 1%;
+    }
+
+    .copyRight span {
+        margin-left: 24%;
+    }
+
+
+    .cleanEating {
+        border: 1px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    .workoutSections {
+        width: 100%;
+    }
+
+    .backText {
+        text-align: center;
+    }
+    .sectionTwoName, .sectionFourName, .sectionSixName  {
+        margin-left: 0%;
+        margin-right: auto;
+        width: 100%; 
+    }
+
+    .fasting {
+        border: 1px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) and (min-width: 680px) {
+    .topRow {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    column-gap: 14px;
+    margin-left: 15%;
+    row-gap: 197px;
+}
+
+    .btnRow {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: row;
+        column-gap: 56px;
+        margin-left: 0%;
+        margin-top: 2%;
+    }
+
+    .workoutIntro {
+        border: 2px solid transparent;
+        height: 107px;
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        margin-top: 21%;
+        color: white;
+    }
+
+    .workoutIntro h1 {
+        font-size: 54px;
+    }
+
+    .topSection p {
+        font-size: 30px;
+        color: white;
+        width: 80%;
+        text-align: center;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+    .btn-primary {
+        margin-top: 5%;
+        margin-left: 11%;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .imgBox {
+        border: 2px solid transparent;
+        height: 185px;
+        width: 222px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rowBack {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-top: 1%;
+    }
+
+    .copyRight span {
+        margin-left: 24%;
+    }
+
+
+    .cleanEating {
+        border: 1px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    .workoutSections {
+        width: 100%;
+    }
+
+    .backText {
+        text-align: center;
+    }
+    .sectionTwoName, .sectionFourName, .sectionSixName  {
+        margin-left: 0%;
+        margin-right: auto;
+        width: 100%; 
+    }
+
+    .fasting {
+        border: 1px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 680px) and (min-width: 500px) {
+    /* .topRow {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: row;
+        column-gap: 56px;
+        margin-left: 0%;
+    } */
+
+    .topRow {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        column-gap: 14px;
+        margin-left: 10%;
+        row-gap: 197px;
+    }
+
+    .btnRow {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        column-gap: 14px;
+        margin-left: 10%;
+        row-gap: 190px;
+        margin-top: 31%;
+    }
+
+    .workoutIntro {
+        border: 2px solid transparent;
+        height: 107px;
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        margin-top: 21%;
+        color: white;
+    }
+
+    .workoutIntro h1 {
+        font-size: 54px;
+    }
+
+    .topSection p {
+        font-size: 30px;
+        color: white;
+        width: 80%;
+        text-align: center;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+    .btn-primary {
+        margin-top: 10%;
+        margin-left: 121%;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .imgBox {
+        border: 2px solid transparent;
+        height: 375px;
+        width: 520px;
+        display: flex;
+        flex-direction: column;
+    }
+
+      
+    /* .imgBox {
+        border: 2px solid transparent;
+        height: 235px;
+        width: 406px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 64%;
+        margin-right: auto;
+       
+    } */
+
+    .rowBack {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-top: 0%;
+    }
+
+    .copyRight span {
+        margin-left: 24%;
+    }
+
+
+    .cleanEating {
+        border: 1px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    .workoutSections {
+        width: 100%;
+    }
+
+    .backText {
+        text-align: center;
+    }
+    .sectionTwoName, .sectionFourName, .sectionSixName  {
+        margin-left: 0%;
+        margin-right: auto;
+        width: 100%; 
+    }
+
+    .fasting {
+        border: 1px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+  
 }
 /* MEDIAAAAAA QUIERIES */
