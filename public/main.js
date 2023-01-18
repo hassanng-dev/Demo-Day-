@@ -235,36 +235,65 @@ function createMeal () {
      .then(response => response.json())
      .then(res => {
     
-     console.log(res)
-     
-     
        document.querySelector('.sectionOneName').innerText = res[0].name
-       document.querySelector('.sectionOneDifficulty').innerText = res[0].dfficulty
-       document.querySelector('.sectionOneInstructions').innerText = res[0].instructions
+       strings = res[0].instructions.split('.')
+       for(let i = 0; i < strings.length; i++) {
+        var list = document.createElement('li');
+        document.querySelector('.sectionOneInstructions').appendChild(list);
+        list.innerText = strings[i]
+       }
+   
  
        document.querySelector('.sectionTwoName').innerText = res[1].name
-       document.querySelector('.sectionTwoDifficulty').innerText = res[1].difficulty
-       document.querySelector('.sectionTwoInstructions').innerText = res[1].instructions
+       strings = res[1].instructions.split('.')
+       for(let i = 0; i < strings.length; i++) {
+        var list = document.createElement('li');
+        document.querySelector('.sectionTwoInstructions').appendChild(list);
+        list.innerText = strings[i]
+       }
+       
  
        document.querySelector('.sectionThreeName').innerText = res[2].name
-       document.querySelector('.sectionThreeDifficulty').innerText = res[2].difficulty
-       document.querySelector('.sectionThreeInstructions').innerText = res[2].instructions
+       strings = res[2].instructions.split('.')
+       for(let i = 0; i < strings.length; i++) {
+        var list = document.createElement('li');
+        document.querySelector('.sectionThreeInstructions').appendChild(list);
+        list.innerText = strings[i]
+       }
+     
  
        document.querySelector('.sectionFourName').innerText = res[3].name
-       document.querySelector('.sectionFourDifficulty').innerText = res[3].difficulty
-       document.querySelector('.sectionFourInstructions').innerText = res[4].instructions
+       strings = res[3].instructions.split('.')
+       for(let i = 0; i < strings.length; i++) {
+        var list = document.createElement('li');
+        document.querySelector('.sectionFourInstructions').appendChild(list);
+        list.innerText = strings[i]
+       }
+      
  
        document.querySelector('.sectionFiveName').innerText = res[4].name
-       document.querySelector('.sectionFiveDifficulty').innerText = res[4].difficulty
-       document.querySelector('.sectionFiveInstructions').innerText = res[4].instructions
+       strings = res[4].instructions.split('.')
+       for(let i = 0; i < strings.length; i++) {
+        var list = document.createElement('li');
+        document.querySelector('.sectionFiveInstructions').appendChild(list);
+        list.innerText = strings[i]
+       }
+       
  
        document.querySelector('.sectionSixName').innerText = res[5].name
-       document.querySelector('.sectionSixDifficulty').innerText = res[5].difficulty
-       document.querySelector('.sectionSixInstructions').innerText = res[5].instructions
+       strings = res[5].instructions.split('.')
+       for(let i = 0; i < strings.length; i++) {
+        var list = document.createElement('li');
+        document.querySelector('.sectionSixInstructions').appendChild(list);
+        list.innerText = strings[i]
+       }
+     
    })
    .catch(err => console.error(err));
      
  }
+
+
 
 document.querySelector('.getInfo').addEventListener('click', getInfo);
 document.querySelector('.displayAPI').addEventListener('click', displayMacros);
