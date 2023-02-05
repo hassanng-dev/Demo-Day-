@@ -97,10 +97,16 @@ const options = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': '0a3efde1b6mshc7be58f23825b4ap190b79jsn44401af5791b',
-		'X-RapidAPI-Host': 'calorieninjas.p.rapidapi.com'
+		'X-RapidAPI-Host': 'nutrition-by-api-ninjas.p.rapidapi.com'
 	}
 };
-function getInfo(){
+
+fetch('https://nutrition-by-api-ninjas.p.rapidapi.com/v1/nutrition?query=1lb%20brisket%20with%20fries', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+
+  function getInfo(){
   const foodSearch = document.querySelector('.apiInfo').value
   fetch(`https://calorieninjas.p.rapidapi.com/v1/nutrition?query=${foodSearch}`, options)
 	.then(response => response.json())

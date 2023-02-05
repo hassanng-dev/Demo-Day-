@@ -659,8 +659,8 @@ ol li {
         border: 2px solid transparent;
         background-image: url(img/healthyeating.jpeg);
         background-size: 100%;
-        background-position-y: -81%;
-        width: 62%;
+        background-position-y: -44%;
+        width: 68%;
     }
     
     .macros {
@@ -712,6 +712,8 @@ ol li {
     .deleteButton {
         color:red;
         margin-left: 45%;
+        font-size: 20px;
+        margin-top: 73%;
     }
 
 /*============================= */
@@ -3969,12 +3971,11 @@ header h1 {
 
    
 }
+/* ========================== */
+/* ------ MOBILE VIEW ------ */
+/* ========================== */
 
-/* MOBILE VIEW */
-
-@media (max-width: 680px) and (min-width: 500px) {
-  
-
+@media (max-width: 500px) {
     .topRow {
         border: 2px solid transparent;
         display: flex;
@@ -4078,13 +4079,122 @@ header h1 {
         height: auto;
         width: 100%;
     }
+}
+
+@media (max-width: 680px) and (min-width: 501px) {
+  
+
+    .topRow {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        column-gap: 14px;
+        margin-left: 4%;
+        margin-right: auto;
+        row-gap: 197px;
+    }
+
+    .btnRow {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        column-gap: 14px;
+        margin-left: 0%;
+        row-gap: 190px;
+        margin-top: 37%;
+    }
+
+    .workoutIntro {
+        border: 2px solid transparent;
+        height: 107px;
+        width: 470px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        margin-top: 21%;
+        color: white;
+    }
+    
+
+    .workoutIntro h1 {
+        font-size: 44px;
+    }
+
+    .topSection p {
+        font-size: 24px;
+        color: white;
+        width: 100%;
+        text-align: center;
+        margin-left: 0%;
+        margin-top: -4%;
+    }
+
+    .btn-primary {
+        margin-top: 26%;
+        margin-left: 150%;
+        margin-right: auto;
+        width: 124%;
+    }
+
+    .imgBox {
+        border: 2px solid transparent;
+        height: 325px;
+        width: 473px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rowBack {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-top: 35%;
+    }
+
+    .copyRight span {
+        margin-left: 24%;
+    }
+
+
+    .cleanEating {
+        border: 1px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+   
+
+    .workoutSections {
+        width: 100%;
+    }
+
+    .backText {
+        text-align: center;
+    }
+    .sectionTwoName, .sectionFourName, .sectionSixName  {
+        margin-left: 0%;
+        margin-right: auto;
+        width: 100%; 
+    }
+
+    .fasting {
+        border: 1px solid transparent;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
   
 }
 
 
 
 /* MEAL PLAN PAGE */
-@media (max-width: 600px) and (min-width: 500px) {
+@media (max-width: 550px) and (min-width: 500px) {
    
     .intro h1 {
         font-size: 55px;
@@ -4147,7 +4257,7 @@ header h1 {
    
 
     .macros li {
-        margin-left: 11%;
+        margin-left: 6%;
     }
 
     .displayAPI {
@@ -4256,13 +4366,203 @@ header h1 {
 
 .topSection {
     border: 2px solid black;
-    /* background-image: url(img/gymbackground.jpg);
-    background-size: 100%; */
     height: 323px;
+}
+
+.fa-solid, .fas {
+    font-weight: 900;
+    font-size: 20px;
 }
 /* MEAL TRACKER */
     
 }
 /* Meal plan  */
+
+
+@media (max-width: 600px) and (min-width: 551px) {
+    .intro h1 {
+        font-size: 55px;
+        width: 100%;
+    }
+
+    .intro {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-top: 19%;
+    }
+
+    .topSection p {
+        font-size: 24px;
+        color: white;
+        width: 100%;
+        text-align: center;
+        margin-left: 0%;
+        margin-top: 0%;
+    }
+
+    .nutrionAPI {
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-size: 100%;
+    }
+    
+    .apiInfoBox {
+        border: 2px solid black;
+        box-shadow: 5px 5px 5px black;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1%;
+    }
+
+    .seperateMacros {
+        border: 2px solid black;
+        border-radius: 7px;
+        margin-top: 2%;
+        box-shadow: 5px 5px 5px black;
+        margin-bottom: 3%;
+        width: 135%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 8%;
+    }
+
+    .seperateMacros li {
+        font-size: 18px;
+    }
+
+   
+
+    .macros li {
+        margin-left: 11%;
+    }
+
+    .displayAPI {
+        border: 2px solid black;
+        margin-left: 25%;
+        margin-right: auto;
+        margin-bottom: 5%;
+        width: 47%;
+    }
+
+
+    .macroList {
+    width: 70%;
+    }   
+
+    .macrosSection {
+        border: 2px solid transparent;
+        background-image: none;
+        background-size: 100%;
+        background-position-y: -81%;
+        width: 90%;
+    }
+
+    .copyRight span {
+        margin-left: 4%;
+    }
+/* Meal plan  */
+
+/* Input form */
+    .dailyMealForm {
+        border: 2px solid transparent;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 2%;
+    }
+
+    .dailyMeal {
+        border: 2px solid black;
+        width: 50%;
+        height: auto;
+        text-align: center;
+        margin-left: 30%;
+        margin-top: 16%;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px black;
+    }
+
+    .calorieTracker {
+        border: 2px solid transparent;
+        display: flex;
+        background-image: url(img/nutrients.jpeg);
+        background-size: 240%;
+    }
+
+    #mealTxt {
+        border: 2px solid transparent;
+        margin-left: 0%;
+        text-align: center;
+        margin-top: 3%;
+    }
+
+    #mealTxt input {
+        border: 2px solid black;
+        text-align: center;
+        margin-right: 5%;
+    }
+
+    .txtInput input {
+        border: 2px solid black;
+        width: 57%;
+        text-align: center;
+        margin-left: 13%;
+    }
+
+    .createMeal {
+        border: 2px solid black;
+        margin-left: 30%;
+        margin-bottom: 4%;
+    }
+
+    
+/* Input form */
+
+/* MEAL TRACKER */
+.daysContainer {
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.daysTxt {
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 2%;
+    box-shadow: 5px 5px 5px black;
+    margin-bottom: 6%;
+    width: 44%;
+}
+
+.messages {
+    border: 2px solid transparent;
+    list-style-position: inside;
+   
+}
+
+.topSection {
+    border: 2px solid black;
+    /* background-image: url(img/gymbackground.jpg);
+    background-size: 100%; */
+    height: 323px;
+}
+
+.macros h2 {
+    margin-left: 30%;
+    margin-right:auto;
+}
+/* MEAL TRACKER */
+}
+/* ========================== */
+/* ------ MOBILE VIEW ------ */
+/* ========================== */
 
 /* MEDIAAAAAA QUIERIES */

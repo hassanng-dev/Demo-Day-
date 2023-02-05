@@ -90,20 +90,30 @@
           <ul class="macroList">
             <section class="macroBoxes">
               <% for (let i = 0; i < test.length; i++) { %>
-                <div class="seperateMacros">
-                  <li><span class="macroName"><%= test[i].name %></span></li>
-                  <li><span class="macroCalories"><%= test[i].calories %> Calories </span></li>
-                  <li><span class="macroProtein"><%= test[i].protein %> Protein </span></li>
-                  <li><span class="macroGrams"><%= test[i].carbs %> Carbs </span></li>
-                  <li><span class="macroFats"><%= test[i].fats %> Fats </span></li>
-                  <span><i class="fa-solid fa-ban deleteButton"></i></span>
-                  
+               
+
+                <div class="container text-center seperateMacros">
+                  <div class="row">
+                    <div class="col-6 col-sm-3 macroName"><%= test[i].name %></div>
+                    <div class="col-6 col-sm-3 macroCalories"><%= test[i].calories %> Calories </div>
+                    <div class="col-6 col-sm-3 macroProtein"><%= test[i].protein %> Protein </div>
+                    <div class="col-6 col-sm-3 macroGrams"><%= test[i].carbs %> Carbs </div>
+                    <div class="col-6 col-sm-3 macroFats"><%= test[i].fats %> Fats </div>
+                    <span><i class="fa-solid fa-ban deleteButton"></i></span>
+                    <!-- Force next columns to break to new line -->
+                    <div class="w-100"></div>
+                
+                   
+                  </div>
                 </div>
               <% } %>
             </section>
           </ul>
         </section>
       </section> 
+
+
+    
 
 
       
